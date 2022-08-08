@@ -1,0 +1,45 @@
+INFO  19:32:28,484 - Compiling source file: D:\Faks\PP1\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  19:32:28,498 - #2 program
+INFO  19:32:28,498 - #3 MJProgram
+INFO  19:32:28,498 - #3 int
+INFO  19:32:28,499 - #3 x
+INFO  19:32:28,499 - #6 ;
+INFO  19:32:28,500 - #3 int
+INFO  19:32:28,500 - #3 y
+INFO  19:32:28,500 - #6 ;
+INFO  19:32:28,500 - #4 {
+INFO  19:32:28,501 - #3 int
+INFO  19:32:28,501 - #3 k
+INFO  19:32:28,501 - #17 (
+INFO  19:32:28,501 - #18 )
+INFO  19:32:28,502 - #3 int
+INFO  19:32:28,502 - #3 c
+INFO  19:32:28,502 - #6 ;
+INFO  19:32:28,502 - #4 {
+INFO  19:32:28,502 - #3 c
+INFO  19:32:28,502 - #7 =
+INFO  19:32:28,503 - #14 1
+INFO  19:32:28,504 - #6 ;
+INFO  19:32:28,505 - #28 return
+INFO  19:32:28,505 - #3 c
+INFO  19:32:28,505 - #8 +
+INFO  19:32:28,506 - #14 1
+INFO  19:32:28,506 - #6 ;
+INFO  19:32:28,507 - #5 }
+INFO  19:32:28,507 - #3 int
+INFO  19:32:28,507 - #3 main
+INFO  19:32:28,507 - #17 (
+INFO  19:32:28,507 - #18 )
+INFO  19:32:28,507 - #4 {
+INFO  19:32:28,507 - #3 y
+INFO  19:32:28,507 - #7 =
+INFO  19:32:28,508 - #14 2
+INFO  19:32:28,508 - #6 ;
+INFO  19:32:28,508 - #3 x
+INFO  19:32:28,508 - #7 =
+INFO  19:32:28,508 - #23 ,
+ERROR 19:32:28,508 - 
+Sintaksna greska na liniji 12
+ERROR 19:32:28,508 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 12
+INFO  19:32:28,508 - about to log
+INFO  19:32:28,508 - rs.ac.bg.etf.pp1.ast.Designator@701fc37a

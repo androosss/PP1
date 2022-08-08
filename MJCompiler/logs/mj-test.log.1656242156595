@@ -1,0 +1,71 @@
+INFO  13:14:23,131 - Compiling source file: D:\Faks\PP1\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  13:14:23,146 - #6 program
+INFO  13:14:23,146 - #2 MJProgram
+INFO  13:14:23,146 - #2 int
+INFO  13:14:23,147 - #2 x
+INFO  13:14:23,147 - #9 ;
+INFO  13:14:23,148 - #2 int
+INFO  13:14:23,148 - #2 y
+INFO  13:14:23,148 - #19 [
+INFO  13:14:23,149 - #23 ,
+ERROR 13:14:23,149 - 
+Sintaksna greska na liniji 2
+INFO  13:14:23,149 - #20 ]
+INFO  13:14:23,149 - #9 ;
+INFO  13:14:23,149 - #7 {
+INFO  13:14:23,149 - #2 int
+INFO  13:14:23,149 - #2 k
+INFO  13:14:23,149 - #17 (
+INFO  13:14:23,149 - #18 )
+INFO  13:14:23,149 - #2 int
+INFO  13:14:23,149 - #2 c
+INFO  13:14:23,149 - #9 ;
+INFO  13:14:23,150 - #7 {
+INFO  13:14:23,150 - #2 c
+INFO  13:14:23,150 - #10 =
+INFO  13:14:23,150 - #3 1
+INFO  13:14:23,150 - #9 ;
+INFO  13:14:23,150 - #28 return
+INFO  13:14:23,150 - #2 c
+INFO  13:14:23,150 - #11 +
+INFO  13:14:23,150 - #3 1
+INFO  13:14:23,150 - #9 ;
+INFO  13:14:23,150 - #8 }
+INFO  13:14:23,150 - #2 int
+INFO  13:14:23,150 - #2 main
+INFO  13:14:23,150 - #17 (
+INFO  13:14:23,150 - #18 )
+INFO  13:14:23,150 - #7 {
+INFO  13:14:23,150 - #2 y
+INFO  13:14:23,150 - #10 =
+INFO  13:14:23,150 - #3 2
+INFO  13:14:23,151 - #9 ;
+INFO  13:14:23,151 - #2 x
+INFO  13:14:23,151 - #10 =
+INFO  13:14:23,151 - #13 *
+INFO  13:14:23,151 - #2 y
+INFO  13:14:23,151 - #11 +
+INFO  13:14:23,151 - #3 2
+INFO  13:14:23,151 - #9 ;
+INFO  13:14:23,151 - #2 y
+INFO  13:14:23,151 - #10 =
+INFO  13:14:23,151 - #2 k
+INFO  13:14:23,151 - #17 (
+INFO  13:14:23,151 - #18 )
+INFO  13:14:23,151 - #11 +
+INFO  13:14:23,152 - #3 3
+INFO  13:14:23,152 - #9 ;
+INFO  13:14:23,152 - #25 print
+INFO  13:14:23,152 - #17 (
+INFO  13:14:23,152 - #2 y
+INFO  13:14:23,152 - #18 )
+INFO  13:14:23,152 - #9 ;
+INFO  13:14:23,152 - #28 return
+INFO  13:14:23,152 - #3 0
+INFO  13:14:23,152 - #9 ;
+INFO  13:14:23,152 - #8 }
+INFO  13:14:23,152 - #8 }
+ERROR 13:14:23,153 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 17
+INFO  13:14:23,153 - StandardType(
+ int
+) [StandardType]

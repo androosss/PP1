@@ -1,0 +1,45 @@
+INFO  19:33:11,189 - Compiling source file: D:\Faks\PP1\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  19:33:11,202 - #2 program
+INFO  19:33:11,202 - #3 MJProgram
+INFO  19:33:11,202 - #3 int
+INFO  19:33:11,203 - #3 x
+INFO  19:33:11,203 - #6 ;
+INFO  19:33:11,204 - #3 int
+INFO  19:33:11,204 - #3 y
+INFO  19:33:11,204 - #6 ;
+INFO  19:33:11,204 - #4 {
+INFO  19:33:11,204 - #3 int
+INFO  19:33:11,205 - #3 k
+INFO  19:33:11,205 - #17 (
+INFO  19:33:11,205 - #18 )
+INFO  19:33:11,206 - #3 int
+INFO  19:33:11,206 - #3 c
+INFO  19:33:11,206 - #6 ;
+INFO  19:33:11,206 - #4 {
+INFO  19:33:11,206 - #3 c
+INFO  19:33:11,206 - #7 =
+INFO  19:33:11,207 - #14 1
+INFO  19:33:11,208 - #6 ;
+INFO  19:33:11,209 - #28 return
+INFO  19:33:11,209 - #3 c
+INFO  19:33:11,209 - #8 +
+INFO  19:33:11,209 - #14 1
+INFO  19:33:11,210 - #6 ;
+INFO  19:33:11,210 - #5 }
+INFO  19:33:11,210 - #3 int
+INFO  19:33:11,211 - #3 main
+INFO  19:33:11,211 - #17 (
+INFO  19:33:11,211 - #18 )
+INFO  19:33:11,211 - #4 {
+INFO  19:33:11,211 - #3 y
+INFO  19:33:11,211 - #7 =
+INFO  19:33:11,211 - #14 2
+INFO  19:33:11,211 - #6 ;
+INFO  19:33:11,211 - #3 x
+INFO  19:33:11,211 - #7 =
+INFO  19:33:11,211 - #23 ,
+ERROR 19:33:11,211 - 
+Sintaksna greska na liniji 12
+ERROR 19:33:11,211 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 12
+INFO  19:33:11,211 - about to log
+INFO  19:33:11,211 - rs.ac.bg.etf.pp1.ast.Designator@701fc37a

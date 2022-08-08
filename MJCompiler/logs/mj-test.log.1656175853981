@@ -1,0 +1,52 @@
+INFO  18:48:37,228 - Compiling source file: D:\Faks\PP1\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  18:48:37,243 - #2 program
+INFO  18:48:37,243 - #3 MJProgram
+INFO  18:48:37,243 - #3 int
+INFO  18:48:37,243 - #3 x
+INFO  18:48:37,244 - #6 ;
+INFO  18:48:37,244 - #3 int
+INFO  18:48:37,245 - #3 y
+INFO  18:48:37,245 - #6 ;
+INFO  18:48:37,245 - #4 {
+INFO  18:48:37,245 - #3 int
+INFO  18:48:37,245 - #3 k
+INFO  18:48:37,245 - #17 (
+INFO  18:48:37,246 - #18 )
+INFO  18:48:37,246 - #3 int
+INFO  18:48:37,246 - #3 c
+INFO  18:48:37,246 - #6 ;
+INFO  18:48:37,246 - #4 {
+INFO  18:48:37,246 - #3 c
+INFO  18:48:37,247 - #7 =
+INFO  18:48:37,247 - #14 1
+INFO  18:48:37,248 - #6 ;
+INFO  18:48:37,249 - #28 return
+INFO  18:48:37,249 - #3 c
+INFO  18:48:37,249 - #8 +
+INFO  18:48:37,250 - #14 1
+INFO  18:48:37,250 - #6 ;
+INFO  18:48:37,250 - #5 }
+INFO  18:48:37,250 - #3 int
+INFO  18:48:37,251 - #3 main
+INFO  18:48:37,251 - #17 (
+INFO  18:48:37,251 - #18 )
+INFO  18:48:37,251 - #4 {
+INFO  18:48:37,251 - #3 y
+INFO  18:48:37,251 - #7 =
+INFO  18:48:37,251 - #14 2
+INFO  18:48:37,251 - #6 ;
+INFO  18:48:37,251 - #3 x
+INFO  18:48:37,251 - #7 =
+INFO  18:48:37,251 - #3 y
+INFO  18:48:37,251 - #8 +
+INFO  18:48:37,252 - #14 2
+INFO  18:48:37,252 - #6 ;
+INFO  18:48:37,252 - #3 y
+INFO  18:48:37,252 - #7 =
+INFO  18:48:37,252 - #3 k
+INFO  18:48:37,252 - #17 (
+INFO  18:48:37,252 - #18 )
+ERROR 18:48:37,252 - 
+Sintaksna greska na liniji 13
+ERROR 18:48:37,252 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 13
+INFO  18:48:37,252 - rs.ac.bg.etf.pp1.ast.Designator@701fc37a

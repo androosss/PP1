@@ -1,0 +1,43 @@
+INFO  19:58:22,440 - Compiling source file: D:\Faks\PP1\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  19:58:22,455 - #2 program
+INFO  19:58:22,455 - #3 MJProgram
+INFO  19:58:22,455 - #3 int
+INFO  19:58:22,456 - #3 x
+INFO  19:58:22,456 - #6 ;
+INFO  19:58:22,457 - #3 int
+INFO  19:58:22,457 - #3 y
+INFO  19:58:22,457 - #6 ;
+INFO  19:58:22,457 - #4 {
+INFO  19:58:22,457 - #3 int
+INFO  19:58:22,458 - #3 k
+INFO  19:58:22,458 - #17 (
+INFO  19:58:22,459 - #18 )
+INFO  19:58:22,459 - #3 int
+INFO  19:58:22,459 - #3 c
+INFO  19:58:22,459 - #6 ;
+INFO  19:58:22,459 - #4 {
+INFO  19:58:22,459 - #3 c
+INFO  19:58:22,459 - #7 =
+INFO  19:58:22,460 - #14 1
+INFO  19:58:22,460 - #6 ;
+INFO  19:58:22,462 - #28 return
+INFO  19:58:22,462 - #3 c
+INFO  19:58:22,462 - #8 +
+INFO  19:58:22,462 - #14 1
+INFO  19:58:22,463 - #6 ;
+INFO  19:58:22,463 - #5 }
+INFO  19:58:22,463 - #3 int
+INFO  19:58:22,463 - #3 main
+INFO  19:58:22,464 - #17 (
+INFO  19:58:22,464 - #18 )
+INFO  19:58:22,464 - #4 {
+INFO  19:58:22,464 - #3 y
+INFO  19:58:22,464 - #7 =
+INFO  19:58:22,464 - #14 2
+INFO  19:58:22,464 - #6 ;
+INFO  19:58:22,464 - #3 x
+INFO  19:58:22,464 - #7 =
+INFO  19:58:22,464 - #23 ,
+ERROR 19:58:22,464 - 
+Sintaksna greska na liniji 12
+ERROR 19:58:22,464 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 12
