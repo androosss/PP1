@@ -1,23 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/7/2022 18:40:30
+// 14/7/2022 22:17:41
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ConstChar extends ConstantValues {
 
-    private Character C1;
+    private String C1;
 
-    public ConstChar (Character C1) {
+    public ConstChar (String C1) {
         this.C1=C1;
     }
 
-    public Character getC1() {
+    public String getC1() {
         return C1;
     }
 
-    public void setC1(Character C1) {
+    public void setC1(String C1) {
         this.C1=C1;
     }
 

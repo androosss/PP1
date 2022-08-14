@@ -1,0 +1,1585 @@
+INFO  22:56:00,057 - Compiling source file: C:\Users\mm170466d\Desktop\PP1\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  22:56:00,103 - #6 program
+INFO  22:56:00,103 - #2 test301
+INFO  22:56:00,103 - #24 const
+INFO  22:56:00,105 - #2 int
+INFO  22:56:00,105 - #2 nula
+INFO  22:56:00,106 - #10 =
+INFO  22:56:00,106 - #3 0
+INFO  22:56:00,106 - #9 ;
+INFO  22:56:00,107 - #24 const
+INFO  22:56:00,108 - #2 int
+INFO  22:56:00,109 - #2 jedan
+INFO  22:56:00,109 - #10 =
+INFO  22:56:00,109 - #3 1
+INFO  22:56:00,109 - #9 ;
+INFO  22:56:00,109 - #24 const
+INFO  22:56:00,110 - #2 int
+INFO  22:56:00,110 - #2 pet
+INFO  22:56:00,110 - #10 =
+INFO  22:56:00,110 - #3 5
+INFO  22:56:00,110 - #9 ;
+INFO  22:56:00,111 - #2 int
+INFO  22:56:00,112 - #2 niz
+INFO  22:56:00,112 - #19 [
+INFO  22:56:00,112 - #20 ]
+INFO  22:56:00,112 - #9 ;
+INFO  22:56:00,113 - #2 char
+INFO  22:56:00,113 - #2 nizch
+INFO  22:56:00,113 - #19 [
+INFO  22:56:00,113 - #20 ]
+INFO  22:56:00,113 - #9 ;
+INFO  22:56:00,113 - #7 {
+INFO  22:56:00,113 - #27 void
+INFO  22:56:00,114 - #2 main
+INFO  22:56:00,115 - #17 (
+INFO  22:56:00,116 - #18 )
+INFO  22:56:00,117 - #2 int
+INFO  22:56:00,117 - #2 bodovi
+INFO  22:56:00,117 - #9 ;
+INFO  22:56:00,117 - #2 bool
+INFO  22:56:00,117 - #2 bt
+INFO  22:56:00,120 - #9 ;
+INFO  22:56:00,120 - #7 {
+INFO  22:56:00,122 - #2 bodovi
+INFO  22:56:00,123 - #10 =
+INFO  22:56:00,126 - #3 0
+INFO  22:56:00,127 - #9 ;
+INFO  22:56:00,129 - #2 bodovi
+INFO  22:56:00,129 - #21 ++
+INFO  22:56:00,129 - #9 ;
+INFO  22:56:00,130 - #2 bodovi
+INFO  22:56:00,131 - #10 =
+INFO  22:56:00,131 - #2 bodovi
+INFO  22:56:00,131 - #11 +
+INFO  22:56:00,131 - #2 jedan
+INFO  22:56:00,134 - #9 ;
+INFO  22:56:00,134 - #2 bodovi
+INFO  22:56:00,134 - #10 =
+INFO  22:56:00,134 - #2 bodovi
+INFO  22:56:00,134 - #13 *
+INFO  22:56:00,135 - #2 pet
+INFO  22:56:00,136 - #9 ;
+INFO  22:56:00,136 - #2 bodovi
+INFO  22:56:00,136 - #22 --
+INFO  22:56:00,136 - #9 ;
+INFO  22:56:00,137 - #25 print
+INFO  22:56:00,137 - #17 (
+INFO  22:56:00,138 - #2 bodovi
+INFO  22:56:00,138 - #18 )
+INFO  22:56:00,140 - #9 ;
+INFO  22:56:00,141 - #2 niz
+INFO  22:56:00,141 - #10 =
+INFO  22:56:00,141 - #29 new
+INFO  22:56:00,141 - #2 int
+INFO  22:56:00,141 - #19 [
+INFO  22:56:00,141 - #3 3
+INFO  22:56:00,142 - #20 ]
+INFO  22:56:00,142 - #9 ;
+INFO  22:56:00,142 - #2 niz
+INFO  22:56:00,142 - #19 [
+INFO  22:56:00,142 - #2 nula
+INFO  22:56:00,143 - #20 ]
+INFO  22:56:00,143 - #10 =
+INFO  22:56:00,143 - #2 jedan
+INFO  22:56:00,143 - #9 ;
+INFO  22:56:00,143 - #2 niz
+INFO  22:56:00,143 - #19 [
+INFO  22:56:00,144 - #3 1
+INFO  22:56:00,144 - #20 ]
+INFO  22:56:00,144 - #10 =
+INFO  22:56:00,144 - #3 2
+INFO  22:56:00,144 - #9 ;
+INFO  22:56:00,144 - #2 niz
+INFO  22:56:00,144 - #19 [
+INFO  22:56:00,145 - #2 niz
+INFO  22:56:00,145 - #19 [
+INFO  22:56:00,145 - #2 jedan
+INFO  22:56:00,146 - #20 ]
+INFO  22:56:00,146 - #20 ]
+INFO  22:56:00,146 - #10 =
+INFO  22:56:00,146 - #2 niz
+INFO  22:56:00,146 - #19 [
+INFO  22:56:00,146 - #2 niz
+INFO  22:56:00,147 - #19 [
+INFO  22:56:00,147 - #3 0
+INFO  22:56:00,147 - #20 ]
+INFO  22:56:00,147 - #20 ]
+INFO  22:56:00,147 - #13 *
+INFO  22:56:00,147 - #3 3
+INFO  22:56:00,147 - #9 ;
+INFO  22:56:00,147 - #2 bodovi
+INFO  22:56:00,147 - #10 =
+INFO  22:56:00,147 - #2 niz
+INFO  22:56:00,148 - #19 [
+INFO  22:56:00,148 - #3 2
+INFO  22:56:00,150 - #20 ]
+INFO  22:56:00,151 - #14 /
+INFO  22:56:00,151 - #2 niz
+INFO  22:56:00,153 - #19 [
+INFO  22:56:00,153 - #3 0
+INFO  22:56:00,153 - #20 ]
+INFO  22:56:00,153 - #9 ;
+INFO  22:56:00,154 - #25 print
+INFO  22:56:00,154 - #17 (
+INFO  22:56:00,154 - #2 bodovi
+INFO  22:56:00,154 - #18 )
+INFO  22:56:00,154 - #9 ;
+INFO  22:56:00,155 - #25 print
+INFO  22:56:00,155 - #17 (
+INFO  22:56:00,155 - #2 niz
+INFO  22:56:00,155 - #19 [
+INFO  22:56:00,155 - #3 2
+INFO  22:56:00,155 - #20 ]
+INFO  22:56:00,155 - #18 )
+INFO  22:56:00,155 - #9 ;
+INFO  22:56:00,155 - #2 nizch
+INFO  22:56:00,156 - #10 =
+INFO  22:56:00,156 - #29 new
+INFO  22:56:00,156 - #2 char
+INFO  22:56:00,156 - #19 [
+INFO  22:56:00,156 - #3 3
+INFO  22:56:00,156 - #20 ]
+INFO  22:56:00,156 - #9 ;
+INFO  22:56:00,157 - #2 nizch
+INFO  22:56:00,157 - #19 [
+INFO  22:56:00,157 - #3 0
+INFO  22:56:00,157 - #20 ]
+INFO  22:56:00,157 - #10 =
+INFO  22:56:00,157 - #5 'a'
+INFO  22:56:00,157 - #9 ;
+INFO  22:56:00,157 - #2 nizch
+INFO  22:56:00,157 - #19 [
+INFO  22:56:00,157 - #2 jedan
+INFO  22:56:00,158 - #20 ]
+INFO  22:56:00,158 - #10 =
+INFO  22:56:00,159 - #5 'b'
+INFO  22:56:00,159 - #9 ;
+INFO  22:56:00,159 - #2 nizch
+INFO  22:56:00,159 - #19 [
+INFO  22:56:00,159 - #2 pet
+INFO  22:56:00,159 - #12 -
+INFO  22:56:00,159 - #3 3
+INFO  22:56:00,162 - #20 ]
+INFO  22:56:00,162 - #10 =
+INFO  22:56:00,162 - #5 'c'
+INFO  22:56:00,162 - #9 ;
+INFO  22:56:00,162 - #25 print
+INFO  22:56:00,163 - #17 (
+INFO  22:56:00,163 - #2 nizch
+INFO  22:56:00,163 - #19 [
+INFO  22:56:00,163 - #3 1
+INFO  22:56:00,163 - #20 ]
+INFO  22:56:00,163 - #18 )
+INFO  22:56:00,163 - #9 ;
+INFO  22:56:00,163 - #25 print
+INFO  22:56:00,164 - #17 (
+INFO  22:56:00,164 - #2 nizch
+INFO  22:56:00,164 - #19 [
+INFO  22:56:00,164 - #2 jedan
+INFO  22:56:00,164 - #13 *
+INFO  22:56:00,164 - #3 2
+INFO  22:56:00,164 - #20 ]
+INFO  22:56:00,164 - #18 )
+INFO  22:56:00,164 - #9 ;
+INFO  22:56:00,164 - #2 bodovi
+INFO  22:56:00,164 - #10 =
+INFO  22:56:00,165 - #2 bodovi
+INFO  22:56:00,165 - #11 +
+INFO  22:56:00,165 - #17 (
+INFO  22:56:00,165 - #2 pet
+INFO  22:56:00,165 - #13 *
+INFO  22:56:00,165 - #2 jedan
+INFO  22:56:00,165 - #12 -
+INFO  22:56:00,166 - #3 1
+INFO  22:56:00,166 - #18 )
+INFO  22:56:00,167 - #13 *
+INFO  22:56:00,167 - #2 bodovi
+INFO  22:56:00,167 - #12 -
+INFO  22:56:00,167 - #17 (
+INFO  22:56:00,167 - #3 3
+INFO  22:56:00,167 - #15 %
+INFO  22:56:00,168 - #3 2
+INFO  22:56:00,170 - #11 +
+INFO  22:56:00,170 - #3 3
+INFO  22:56:00,170 - #13 *
+INFO  22:56:00,170 - #3 2
+INFO  22:56:00,171 - #12 -
+INFO  22:56:00,171 - #3 3
+INFO  22:56:00,171 - #18 )
+INFO  22:56:00,171 - #9 ;
+INFO  22:56:00,171 - #25 print
+INFO  22:56:00,171 - #17 (
+INFO  22:56:00,172 - #2 bodovi
+INFO  22:56:00,172 - #18 )
+INFO  22:56:00,172 - #9 ;
+INFO  22:56:00,172 - #26 read
+INFO  22:56:00,172 - #17 (
+INFO  22:56:00,173 - #2 bodovi
+INFO  22:56:00,173 - #18 )
+INFO  22:56:00,173 - #9 ;
+INFO  22:56:00,173 - #25 print
+INFO  22:56:00,173 - #17 (
+INFO  22:56:00,173 - #2 bodovi
+INFO  22:56:00,173 - #18 )
+INFO  22:56:00,174 - #9 ;
+INFO  22:56:00,174 - #8 }
+INFO  22:56:00,174 - #8 }
+INFO  22:56:00,186 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  DeclsList(
+    DeclsList(
+      DeclsList(
+        DeclsList(
+          DeclsList(
+            NoDeclList(
+            ) [NoDeclList]
+            DeclarationConst(
+              ConstDecl(
+                StandardType(
+                 int
+                ) [StandardType]
+                SingleConstant(
+                  Constant(
+                   nula
+                    ConstInt(
+                     0
+                    ) [ConstInt]
+                  ) [Constant]
+                ) [SingleConstant]
+              ) [ConstDecl]
+            ) [DeclarationConst]
+          ) [DeclsList]
+          DeclarationConst(
+            ConstDecl(
+              StandardType(
+               int
+              ) [StandardType]
+              SingleConstant(
+                Constant(
+                 jedan
+                  ConstInt(
+                   1
+                  ) [ConstInt]
+                ) [Constant]
+              ) [SingleConstant]
+            ) [ConstDecl]
+          ) [DeclarationConst]
+        ) [DeclsList]
+        DeclarationConst(
+          ConstDecl(
+            StandardType(
+             int
+            ) [StandardType]
+            SingleConstant(
+              Constant(
+               pet
+                ConstInt(
+                 5
+                ) [ConstInt]
+              ) [Constant]
+            ) [SingleConstant]
+          ) [ConstDecl]
+        ) [DeclarationConst]
+      ) [DeclsList]
+      DeclarationVar(
+        VarDeclV(
+          StandardType(
+           int
+          ) [StandardType]
+          SingleVariable(
+            VariableArray(
+             niz
+            ) [VariableArray]
+          ) [SingleVariable]
+        ) [VarDeclV]
+      ) [DeclarationVar]
+    ) [DeclsList]
+    DeclarationVar(
+      VarDeclV(
+        StandardType(
+         char
+        ) [StandardType]
+        SingleVariable(
+          VariableArray(
+           nizch
+          ) [VariableArray]
+        ) [SingleVariable]
+      ) [VarDeclV]
+    ) [DeclarationVar]
+  ) [DeclsList]
+  MethodDeclarations(
+    NoMetDecl(
+    ) [NoMetDecl]
+    MethodDecl(
+      VoidType(
+      ) [VoidType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoFormParams(
+      ) [NoFormParams]
+      DeclsList(
+        DeclsList(
+          NoDeclList(
+          ) [NoDeclList]
+          DeclarationVar(
+            VarDeclV(
+              StandardType(
+               int
+              ) [StandardType]
+              SingleVariable(
+                VariableNormal(
+                 bodovi
+                ) [VariableNormal]
+              ) [SingleVariable]
+            ) [VarDeclV]
+          ) [DeclarationVar]
+        ) [DeclsList]
+        DeclarationVar(
+          VarDeclV(
+            StandardType(
+             bool
+            ) [StandardType]
+            SingleVariable(
+              VariableNormal(
+               bt
+              ) [VariableNormal]
+            ) [SingleVariable]
+          ) [VarDeclV]
+        ) [DeclarationVar]
+      ) [DeclsList]
+      HaveStatements(
+        HaveStatements(
+          HaveStatements(
+            HaveStatements(
+              HaveStatements(
+                HaveStatements(
+                  HaveStatements(
+                    HaveStatements(
+                      HaveStatements(
+                        HaveStatements(
+                          HaveStatements(
+                            HaveStatements(
+                              HaveStatements(
+                                HaveStatements(
+                                  HaveStatements(
+                                    HaveStatements(
+                                      HaveStatements(
+                                        HaveStatements(
+                                          HaveStatements(
+                                            HaveStatements(
+                                              HaveStatements(
+                                                HaveStatements(
+                                                  HaveStatements(
+                                                    NoStatements(
+                                                    ) [NoStatements]
+                                                    DesignatorSt(
+                                                      DesignatorStatementV(
+                                                        Designator(
+                                                          DesignatorName(
+                                                           bodovi
+                                                          ) [DesignatorName]
+                                                          NoArrayOpt(
+                                                          ) [NoArrayOpt]
+                                                        ) [Designator]
+                                                        EqualAssign(
+                                                          NormalExpr(
+                                                            SingleTerm(
+                                                              SingleFactor(
+                                                                Factor(
+                                                                  NoMinusOpt(
+                                                                  ) [NoMinusOpt]
+                                                                  BaseConst(
+                                                                    ConstInt(
+                                                                     0
+                                                                    ) [ConstInt]
+                                                                  ) [BaseConst]
+                                                                ) [Factor]
+                                                              ) [SingleFactor]
+                                                            ) [SingleTerm]
+                                                          ) [NormalExpr]
+                                                        ) [EqualAssign]
+                                                      ) [DesignatorStatementV]
+                                                    ) [DesignatorSt]
+                                                  ) [HaveStatements]
+                                                  DesignatorSt(
+                                                    DesignatorStatementV(
+                                                      Designator(
+                                                        DesignatorName(
+                                                         bodovi
+                                                        ) [DesignatorName]
+                                                        NoArrayOpt(
+                                                        ) [NoArrayOpt]
+                                                      ) [Designator]
+                                                      PlusPlus(
+                                                      ) [PlusPlus]
+                                                    ) [DesignatorStatementV]
+                                                  ) [DesignatorSt]
+                                                ) [HaveStatements]
+                                                DesignatorSt(
+                                                  DesignatorStatementV(
+                                                    Designator(
+                                                      DesignatorName(
+                                                       bodovi
+                                                      ) [DesignatorName]
+                                                      NoArrayOpt(
+                                                      ) [NoArrayOpt]
+                                                    ) [Designator]
+                                                    EqualAssign(
+                                                      NormalExpr(
+                                                        MultipleTerms(
+                                                          SingleTerm(
+                                                            SingleFactor(
+                                                              Factor(
+                                                                NoMinusOpt(
+                                                                ) [NoMinusOpt]
+                                                                BaseCall(
+                                                                  Designator(
+                                                                    DesignatorName(
+                                                                     bodovi
+                                                                    ) [DesignatorName]
+                                                                    NoArrayOpt(
+                                                                    ) [NoArrayOpt]
+                                                                  ) [Designator]
+                                                                  NoCallOpt(
+                                                                  ) [NoCallOpt]
+                                                                ) [BaseCall]
+                                                              ) [Factor]
+                                                            ) [SingleFactor]
+                                                          ) [SingleTerm]
+                                                          PlusOp(
+                                                          ) [PlusOp]
+                                                          SingleFactor(
+                                                            Factor(
+                                                              NoMinusOpt(
+                                                              ) [NoMinusOpt]
+                                                              BaseCall(
+                                                                Designator(
+                                                                  DesignatorName(
+                                                                   jedan
+                                                                  ) [DesignatorName]
+                                                                  NoArrayOpt(
+                                                                  ) [NoArrayOpt]
+                                                                ) [Designator]
+                                                                NoCallOpt(
+                                                                ) [NoCallOpt]
+                                                              ) [BaseCall]
+                                                            ) [Factor]
+                                                          ) [SingleFactor]
+                                                        ) [MultipleTerms]
+                                                      ) [NormalExpr]
+                                                    ) [EqualAssign]
+                                                  ) [DesignatorStatementV]
+                                                ) [DesignatorSt]
+                                              ) [HaveStatements]
+                                              DesignatorSt(
+                                                DesignatorStatementV(
+                                                  Designator(
+                                                    DesignatorName(
+                                                     bodovi
+                                                    ) [DesignatorName]
+                                                    NoArrayOpt(
+                                                    ) [NoArrayOpt]
+                                                  ) [Designator]
+                                                  EqualAssign(
+                                                    NormalExpr(
+                                                      SingleTerm(
+                                                        MultipleFactors(
+                                                          SingleFactor(
+                                                            Factor(
+                                                              NoMinusOpt(
+                                                              ) [NoMinusOpt]
+                                                              BaseCall(
+                                                                Designator(
+                                                                  DesignatorName(
+                                                                   bodovi
+                                                                  ) [DesignatorName]
+                                                                  NoArrayOpt(
+                                                                  ) [NoArrayOpt]
+                                                                ) [Designator]
+                                                                NoCallOpt(
+                                                                ) [NoCallOpt]
+                                                              ) [BaseCall]
+                                                            ) [Factor]
+                                                          ) [SingleFactor]
+                                                          MultOp(
+                                                          ) [MultOp]
+                                                          Factor(
+                                                            NoMinusOpt(
+                                                            ) [NoMinusOpt]
+                                                            BaseCall(
+                                                              Designator(
+                                                                DesignatorName(
+                                                                 pet
+                                                                ) [DesignatorName]
+                                                                NoArrayOpt(
+                                                                ) [NoArrayOpt]
+                                                              ) [Designator]
+                                                              NoCallOpt(
+                                                              ) [NoCallOpt]
+                                                            ) [BaseCall]
+                                                          ) [Factor]
+                                                        ) [MultipleFactors]
+                                                      ) [SingleTerm]
+                                                    ) [NormalExpr]
+                                                  ) [EqualAssign]
+                                                ) [DesignatorStatementV]
+                                              ) [DesignatorSt]
+                                            ) [HaveStatements]
+                                            DesignatorSt(
+                                              DesignatorStatementV(
+                                                Designator(
+                                                  DesignatorName(
+                                                   bodovi
+                                                  ) [DesignatorName]
+                                                  NoArrayOpt(
+                                                  ) [NoArrayOpt]
+                                                ) [Designator]
+                                                MinusMinus(
+                                                ) [MinusMinus]
+                                              ) [DesignatorStatementV]
+                                            ) [DesignatorSt]
+                                          ) [HaveStatements]
+                                          PrintSt(
+                                            NormalExpr(
+                                              SingleTerm(
+                                                SingleFactor(
+                                                  Factor(
+                                                    NoMinusOpt(
+                                                    ) [NoMinusOpt]
+                                                    BaseCall(
+                                                      Designator(
+                                                        DesignatorName(
+                                                         bodovi
+                                                        ) [DesignatorName]
+                                                        NoArrayOpt(
+                                                        ) [NoArrayOpt]
+                                                      ) [Designator]
+                                                      NoCallOpt(
+                                                      ) [NoCallOpt]
+                                                    ) [BaseCall]
+                                                  ) [Factor]
+                                                ) [SingleFactor]
+                                              ) [SingleTerm]
+                                            ) [NormalExpr]
+                                            NoPrintOpt(
+                                            ) [NoPrintOpt]
+                                          ) [PrintSt]
+                                        ) [HaveStatements]
+                                        DesignatorSt(
+                                          DesignatorStatementV(
+                                            Designator(
+                                              DesignatorName(
+                                               niz
+                                              ) [DesignatorName]
+                                              NoArrayOpt(
+                                              ) [NoArrayOpt]
+                                            ) [Designator]
+                                            EqualAssign(
+                                              NormalExpr(
+                                                SingleTerm(
+                                                  SingleFactor(
+                                                    Factor(
+                                                      NoMinusOpt(
+                                                      ) [NoMinusOpt]
+                                                      BaseNew(
+                                                        StandardType(
+                                                         int
+                                                        ) [StandardType]
+                                                        ArrayOpt(
+                                                          NormalExpr(
+                                                            SingleTerm(
+                                                              SingleFactor(
+                                                                Factor(
+                                                                  NoMinusOpt(
+                                                                  ) [NoMinusOpt]
+                                                                  BaseConst(
+                                                                    ConstInt(
+                                                                     3
+                                                                    ) [ConstInt]
+                                                                  ) [BaseConst]
+                                                                ) [Factor]
+                                                              ) [SingleFactor]
+                                                            ) [SingleTerm]
+                                                          ) [NormalExpr]
+                                                        ) [ArrayOpt]
+                                                      ) [BaseNew]
+                                                    ) [Factor]
+                                                  ) [SingleFactor]
+                                                ) [SingleTerm]
+                                              ) [NormalExpr]
+                                            ) [EqualAssign]
+                                          ) [DesignatorStatementV]
+                                        ) [DesignatorSt]
+                                      ) [HaveStatements]
+                                      DesignatorSt(
+                                        DesignatorStatementV(
+                                          Designator(
+                                            DesignatorName(
+                                             niz
+                                            ) [DesignatorName]
+                                            ArrayOpt(
+                                              NormalExpr(
+                                                SingleTerm(
+                                                  SingleFactor(
+                                                    Factor(
+                                                      NoMinusOpt(
+                                                      ) [NoMinusOpt]
+                                                      BaseCall(
+                                                        Designator(
+                                                          DesignatorName(
+                                                           nula
+                                                          ) [DesignatorName]
+                                                          NoArrayOpt(
+                                                          ) [NoArrayOpt]
+                                                        ) [Designator]
+                                                        NoCallOpt(
+                                                        ) [NoCallOpt]
+                                                      ) [BaseCall]
+                                                    ) [Factor]
+                                                  ) [SingleFactor]
+                                                ) [SingleTerm]
+                                              ) [NormalExpr]
+                                            ) [ArrayOpt]
+                                          ) [Designator]
+                                          EqualAssign(
+                                            NormalExpr(
+                                              SingleTerm(
+                                                SingleFactor(
+                                                  Factor(
+                                                    NoMinusOpt(
+                                                    ) [NoMinusOpt]
+                                                    BaseCall(
+                                                      Designator(
+                                                        DesignatorName(
+                                                         jedan
+                                                        ) [DesignatorName]
+                                                        NoArrayOpt(
+                                                        ) [NoArrayOpt]
+                                                      ) [Designator]
+                                                      NoCallOpt(
+                                                      ) [NoCallOpt]
+                                                    ) [BaseCall]
+                                                  ) [Factor]
+                                                ) [SingleFactor]
+                                              ) [SingleTerm]
+                                            ) [NormalExpr]
+                                          ) [EqualAssign]
+                                        ) [DesignatorStatementV]
+                                      ) [DesignatorSt]
+                                    ) [HaveStatements]
+                                    DesignatorSt(
+                                      DesignatorStatementV(
+                                        Designator(
+                                          DesignatorName(
+                                           niz
+                                          ) [DesignatorName]
+                                          ArrayOpt(
+                                            NormalExpr(
+                                              SingleTerm(
+                                                SingleFactor(
+                                                  Factor(
+                                                    NoMinusOpt(
+                                                    ) [NoMinusOpt]
+                                                    BaseConst(
+                                                      ConstInt(
+                                                       1
+                                                      ) [ConstInt]
+                                                    ) [BaseConst]
+                                                  ) [Factor]
+                                                ) [SingleFactor]
+                                              ) [SingleTerm]
+                                            ) [NormalExpr]
+                                          ) [ArrayOpt]
+                                        ) [Designator]
+                                        EqualAssign(
+                                          NormalExpr(
+                                            SingleTerm(
+                                              SingleFactor(
+                                                Factor(
+                                                  NoMinusOpt(
+                                                  ) [NoMinusOpt]
+                                                  BaseConst(
+                                                    ConstInt(
+                                                     2
+                                                    ) [ConstInt]
+                                                  ) [BaseConst]
+                                                ) [Factor]
+                                              ) [SingleFactor]
+                                            ) [SingleTerm]
+                                          ) [NormalExpr]
+                                        ) [EqualAssign]
+                                      ) [DesignatorStatementV]
+                                    ) [DesignatorSt]
+                                  ) [HaveStatements]
+                                  DesignatorSt(
+                                    DesignatorStatementV(
+                                      Designator(
+                                        DesignatorName(
+                                         niz
+                                        ) [DesignatorName]
+                                        ArrayOpt(
+                                          NormalExpr(
+                                            SingleTerm(
+                                              SingleFactor(
+                                                Factor(
+                                                  NoMinusOpt(
+                                                  ) [NoMinusOpt]
+                                                  BaseCall(
+                                                    Designator(
+                                                      DesignatorName(
+                                                       niz
+                                                      ) [DesignatorName]
+                                                      ArrayOpt(
+                                                        NormalExpr(
+                                                          SingleTerm(
+                                                            SingleFactor(
+                                                              Factor(
+                                                                NoMinusOpt(
+                                                                ) [NoMinusOpt]
+                                                                BaseCall(
+                                                                  Designator(
+                                                                    DesignatorName(
+                                                                     jedan
+                                                                    ) [DesignatorName]
+                                                                    NoArrayOpt(
+                                                                    ) [NoArrayOpt]
+                                                                  ) [Designator]
+                                                                  NoCallOpt(
+                                                                  ) [NoCallOpt]
+                                                                ) [BaseCall]
+                                                              ) [Factor]
+                                                            ) [SingleFactor]
+                                                          ) [SingleTerm]
+                                                        ) [NormalExpr]
+                                                      ) [ArrayOpt]
+                                                    ) [Designator]
+                                                    NoCallOpt(
+                                                    ) [NoCallOpt]
+                                                  ) [BaseCall]
+                                                ) [Factor]
+                                              ) [SingleFactor]
+                                            ) [SingleTerm]
+                                          ) [NormalExpr]
+                                        ) [ArrayOpt]
+                                      ) [Designator]
+                                      EqualAssign(
+                                        NormalExpr(
+                                          SingleTerm(
+                                            MultipleFactors(
+                                              SingleFactor(
+                                                Factor(
+                                                  NoMinusOpt(
+                                                  ) [NoMinusOpt]
+                                                  BaseCall(
+                                                    Designator(
+                                                      DesignatorName(
+                                                       niz
+                                                      ) [DesignatorName]
+                                                      ArrayOpt(
+                                                        NormalExpr(
+                                                          SingleTerm(
+                                                            SingleFactor(
+                                                              Factor(
+                                                                NoMinusOpt(
+                                                                ) [NoMinusOpt]
+                                                                BaseCall(
+                                                                  Designator(
+                                                                    DesignatorName(
+                                                                     niz
+                                                                    ) [DesignatorName]
+                                                                    ArrayOpt(
+                                                                      NormalExpr(
+                                                                        SingleTerm(
+                                                                          SingleFactor(
+                                                                            Factor(
+                                                                              NoMinusOpt(
+                                                                              ) [NoMinusOpt]
+                                                                              BaseConst(
+                                                                                ConstInt(
+                                                                                 0
+                                                                                ) [ConstInt]
+                                                                              ) [BaseConst]
+                                                                            ) [Factor]
+                                                                          ) [SingleFactor]
+                                                                        ) [SingleTerm]
+                                                                      ) [NormalExpr]
+                                                                    ) [ArrayOpt]
+                                                                  ) [Designator]
+                                                                  NoCallOpt(
+                                                                  ) [NoCallOpt]
+                                                                ) [BaseCall]
+                                                              ) [Factor]
+                                                            ) [SingleFactor]
+                                                          ) [SingleTerm]
+                                                        ) [NormalExpr]
+                                                      ) [ArrayOpt]
+                                                    ) [Designator]
+                                                    NoCallOpt(
+                                                    ) [NoCallOpt]
+                                                  ) [BaseCall]
+                                                ) [Factor]
+                                              ) [SingleFactor]
+                                              MultOp(
+                                              ) [MultOp]
+                                              Factor(
+                                                NoMinusOpt(
+                                                ) [NoMinusOpt]
+                                                BaseConst(
+                                                  ConstInt(
+                                                   3
+                                                  ) [ConstInt]
+                                                ) [BaseConst]
+                                              ) [Factor]
+                                            ) [MultipleFactors]
+                                          ) [SingleTerm]
+                                        ) [NormalExpr]
+                                      ) [EqualAssign]
+                                    ) [DesignatorStatementV]
+                                  ) [DesignatorSt]
+                                ) [HaveStatements]
+                                DesignatorSt(
+                                  DesignatorStatementV(
+                                    Designator(
+                                      DesignatorName(
+                                       bodovi
+                                      ) [DesignatorName]
+                                      NoArrayOpt(
+                                      ) [NoArrayOpt]
+                                    ) [Designator]
+                                    EqualAssign(
+                                      NormalExpr(
+                                        SingleTerm(
+                                          MultipleFactors(
+                                            SingleFactor(
+                                              Factor(
+                                                NoMinusOpt(
+                                                ) [NoMinusOpt]
+                                                BaseCall(
+                                                  Designator(
+                                                    DesignatorName(
+                                                     niz
+                                                    ) [DesignatorName]
+                                                    ArrayOpt(
+                                                      NormalExpr(
+                                                        SingleTerm(
+                                                          SingleFactor(
+                                                            Factor(
+                                                              NoMinusOpt(
+                                                              ) [NoMinusOpt]
+                                                              BaseConst(
+                                                                ConstInt(
+                                                                 2
+                                                                ) [ConstInt]
+                                                              ) [BaseConst]
+                                                            ) [Factor]
+                                                          ) [SingleFactor]
+                                                        ) [SingleTerm]
+                                                      ) [NormalExpr]
+                                                    ) [ArrayOpt]
+                                                  ) [Designator]
+                                                  NoCallOpt(
+                                                  ) [NoCallOpt]
+                                                ) [BaseCall]
+                                              ) [Factor]
+                                            ) [SingleFactor]
+                                            DivOp(
+                                            ) [DivOp]
+                                            Factor(
+                                              NoMinusOpt(
+                                              ) [NoMinusOpt]
+                                              BaseCall(
+                                                Designator(
+                                                  DesignatorName(
+                                                   niz
+                                                  ) [DesignatorName]
+                                                  ArrayOpt(
+                                                    NormalExpr(
+                                                      SingleTerm(
+                                                        SingleFactor(
+                                                          Factor(
+                                                            NoMinusOpt(
+                                                            ) [NoMinusOpt]
+                                                            BaseConst(
+                                                              ConstInt(
+                                                               0
+                                                              ) [ConstInt]
+                                                            ) [BaseConst]
+                                                          ) [Factor]
+                                                        ) [SingleFactor]
+                                                      ) [SingleTerm]
+                                                    ) [NormalExpr]
+                                                  ) [ArrayOpt]
+                                                ) [Designator]
+                                                NoCallOpt(
+                                                ) [NoCallOpt]
+                                              ) [BaseCall]
+                                            ) [Factor]
+                                          ) [MultipleFactors]
+                                        ) [SingleTerm]
+                                      ) [NormalExpr]
+                                    ) [EqualAssign]
+                                  ) [DesignatorStatementV]
+                                ) [DesignatorSt]
+                              ) [HaveStatements]
+                              PrintSt(
+                                NormalExpr(
+                                  SingleTerm(
+                                    SingleFactor(
+                                      Factor(
+                                        NoMinusOpt(
+                                        ) [NoMinusOpt]
+                                        BaseCall(
+                                          Designator(
+                                            DesignatorName(
+                                             bodovi
+                                            ) [DesignatorName]
+                                            NoArrayOpt(
+                                            ) [NoArrayOpt]
+                                          ) [Designator]
+                                          NoCallOpt(
+                                          ) [NoCallOpt]
+                                        ) [BaseCall]
+                                      ) [Factor]
+                                    ) [SingleFactor]
+                                  ) [SingleTerm]
+                                ) [NormalExpr]
+                                NoPrintOpt(
+                                ) [NoPrintOpt]
+                              ) [PrintSt]
+                            ) [HaveStatements]
+                            PrintSt(
+                              NormalExpr(
+                                SingleTerm(
+                                  SingleFactor(
+                                    Factor(
+                                      NoMinusOpt(
+                                      ) [NoMinusOpt]
+                                      BaseCall(
+                                        Designator(
+                                          DesignatorName(
+                                           niz
+                                          ) [DesignatorName]
+                                          ArrayOpt(
+                                            NormalExpr(
+                                              SingleTerm(
+                                                SingleFactor(
+                                                  Factor(
+                                                    NoMinusOpt(
+                                                    ) [NoMinusOpt]
+                                                    BaseConst(
+                                                      ConstInt(
+                                                       2
+                                                      ) [ConstInt]
+                                                    ) [BaseConst]
+                                                  ) [Factor]
+                                                ) [SingleFactor]
+                                              ) [SingleTerm]
+                                            ) [NormalExpr]
+                                          ) [ArrayOpt]
+                                        ) [Designator]
+                                        NoCallOpt(
+                                        ) [NoCallOpt]
+                                      ) [BaseCall]
+                                    ) [Factor]
+                                  ) [SingleFactor]
+                                ) [SingleTerm]
+                              ) [NormalExpr]
+                              NoPrintOpt(
+                              ) [NoPrintOpt]
+                            ) [PrintSt]
+                          ) [HaveStatements]
+                          DesignatorSt(
+                            DesignatorStatementV(
+                              Designator(
+                                DesignatorName(
+                                 nizch
+                                ) [DesignatorName]
+                                NoArrayOpt(
+                                ) [NoArrayOpt]
+                              ) [Designator]
+                              EqualAssign(
+                                NormalExpr(
+                                  SingleTerm(
+                                    SingleFactor(
+                                      Factor(
+                                        NoMinusOpt(
+                                        ) [NoMinusOpt]
+                                        BaseNew(
+                                          StandardType(
+                                           char
+                                          ) [StandardType]
+                                          ArrayOpt(
+                                            NormalExpr(
+                                              SingleTerm(
+                                                SingleFactor(
+                                                  Factor(
+                                                    NoMinusOpt(
+                                                    ) [NoMinusOpt]
+                                                    BaseConst(
+                                                      ConstInt(
+                                                       3
+                                                      ) [ConstInt]
+                                                    ) [BaseConst]
+                                                  ) [Factor]
+                                                ) [SingleFactor]
+                                              ) [SingleTerm]
+                                            ) [NormalExpr]
+                                          ) [ArrayOpt]
+                                        ) [BaseNew]
+                                      ) [Factor]
+                                    ) [SingleFactor]
+                                  ) [SingleTerm]
+                                ) [NormalExpr]
+                              ) [EqualAssign]
+                            ) [DesignatorStatementV]
+                          ) [DesignatorSt]
+                        ) [HaveStatements]
+                        DesignatorSt(
+                          DesignatorStatementV(
+                            Designator(
+                              DesignatorName(
+                               nizch
+                              ) [DesignatorName]
+                              ArrayOpt(
+                                NormalExpr(
+                                  SingleTerm(
+                                    SingleFactor(
+                                      Factor(
+                                        NoMinusOpt(
+                                        ) [NoMinusOpt]
+                                        BaseConst(
+                                          ConstInt(
+                                           0
+                                          ) [ConstInt]
+                                        ) [BaseConst]
+                                      ) [Factor]
+                                    ) [SingleFactor]
+                                  ) [SingleTerm]
+                                ) [NormalExpr]
+                              ) [ArrayOpt]
+                            ) [Designator]
+                            EqualAssign(
+                              NormalExpr(
+                                SingleTerm(
+                                  SingleFactor(
+                                    Factor(
+                                      NoMinusOpt(
+                                      ) [NoMinusOpt]
+                                      BaseConst(
+                                        ConstChar(
+                                         'a'
+                                        ) [ConstChar]
+                                      ) [BaseConst]
+                                    ) [Factor]
+                                  ) [SingleFactor]
+                                ) [SingleTerm]
+                              ) [NormalExpr]
+                            ) [EqualAssign]
+                          ) [DesignatorStatementV]
+                        ) [DesignatorSt]
+                      ) [HaveStatements]
+                      DesignatorSt(
+                        DesignatorStatementV(
+                          Designator(
+                            DesignatorName(
+                             nizch
+                            ) [DesignatorName]
+                            ArrayOpt(
+                              NormalExpr(
+                                SingleTerm(
+                                  SingleFactor(
+                                    Factor(
+                                      NoMinusOpt(
+                                      ) [NoMinusOpt]
+                                      BaseCall(
+                                        Designator(
+                                          DesignatorName(
+                                           jedan
+                                          ) [DesignatorName]
+                                          NoArrayOpt(
+                                          ) [NoArrayOpt]
+                                        ) [Designator]
+                                        NoCallOpt(
+                                        ) [NoCallOpt]
+                                      ) [BaseCall]
+                                    ) [Factor]
+                                  ) [SingleFactor]
+                                ) [SingleTerm]
+                              ) [NormalExpr]
+                            ) [ArrayOpt]
+                          ) [Designator]
+                          EqualAssign(
+                            NormalExpr(
+                              SingleTerm(
+                                SingleFactor(
+                                  Factor(
+                                    NoMinusOpt(
+                                    ) [NoMinusOpt]
+                                    BaseConst(
+                                      ConstChar(
+                                       'b'
+                                      ) [ConstChar]
+                                    ) [BaseConst]
+                                  ) [Factor]
+                                ) [SingleFactor]
+                              ) [SingleTerm]
+                            ) [NormalExpr]
+                          ) [EqualAssign]
+                        ) [DesignatorStatementV]
+                      ) [DesignatorSt]
+                    ) [HaveStatements]
+                    DesignatorSt(
+                      DesignatorStatementV(
+                        Designator(
+                          DesignatorName(
+                           nizch
+                          ) [DesignatorName]
+                          ArrayOpt(
+                            NormalExpr(
+                              MultipleTerms(
+                                SingleTerm(
+                                  SingleFactor(
+                                    Factor(
+                                      NoMinusOpt(
+                                      ) [NoMinusOpt]
+                                      BaseCall(
+                                        Designator(
+                                          DesignatorName(
+                                           pet
+                                          ) [DesignatorName]
+                                          NoArrayOpt(
+                                          ) [NoArrayOpt]
+                                        ) [Designator]
+                                        NoCallOpt(
+                                        ) [NoCallOpt]
+                                      ) [BaseCall]
+                                    ) [Factor]
+                                  ) [SingleFactor]
+                                ) [SingleTerm]
+                                MinusOp(
+                                ) [MinusOp]
+                                SingleFactor(
+                                  Factor(
+                                    NoMinusOpt(
+                                    ) [NoMinusOpt]
+                                    BaseConst(
+                                      ConstInt(
+                                       3
+                                      ) [ConstInt]
+                                    ) [BaseConst]
+                                  ) [Factor]
+                                ) [SingleFactor]
+                              ) [MultipleTerms]
+                            ) [NormalExpr]
+                          ) [ArrayOpt]
+                        ) [Designator]
+                        EqualAssign(
+                          NormalExpr(
+                            SingleTerm(
+                              SingleFactor(
+                                Factor(
+                                  NoMinusOpt(
+                                  ) [NoMinusOpt]
+                                  BaseConst(
+                                    ConstChar(
+                                     'c'
+                                    ) [ConstChar]
+                                  ) [BaseConst]
+                                ) [Factor]
+                              ) [SingleFactor]
+                            ) [SingleTerm]
+                          ) [NormalExpr]
+                        ) [EqualAssign]
+                      ) [DesignatorStatementV]
+                    ) [DesignatorSt]
+                  ) [HaveStatements]
+                  PrintSt(
+                    NormalExpr(
+                      SingleTerm(
+                        SingleFactor(
+                          Factor(
+                            NoMinusOpt(
+                            ) [NoMinusOpt]
+                            BaseCall(
+                              Designator(
+                                DesignatorName(
+                                 nizch
+                                ) [DesignatorName]
+                                ArrayOpt(
+                                  NormalExpr(
+                                    SingleTerm(
+                                      SingleFactor(
+                                        Factor(
+                                          NoMinusOpt(
+                                          ) [NoMinusOpt]
+                                          BaseConst(
+                                            ConstInt(
+                                             1
+                                            ) [ConstInt]
+                                          ) [BaseConst]
+                                        ) [Factor]
+                                      ) [SingleFactor]
+                                    ) [SingleTerm]
+                                  ) [NormalExpr]
+                                ) [ArrayOpt]
+                              ) [Designator]
+                              NoCallOpt(
+                              ) [NoCallOpt]
+                            ) [BaseCall]
+                          ) [Factor]
+                        ) [SingleFactor]
+                      ) [SingleTerm]
+                    ) [NormalExpr]
+                    NoPrintOpt(
+                    ) [NoPrintOpt]
+                  ) [PrintSt]
+                ) [HaveStatements]
+                PrintSt(
+                  NormalExpr(
+                    SingleTerm(
+                      SingleFactor(
+                        Factor(
+                          NoMinusOpt(
+                          ) [NoMinusOpt]
+                          BaseCall(
+                            Designator(
+                              DesignatorName(
+                               nizch
+                              ) [DesignatorName]
+                              ArrayOpt(
+                                NormalExpr(
+                                  SingleTerm(
+                                    MultipleFactors(
+                                      SingleFactor(
+                                        Factor(
+                                          NoMinusOpt(
+                                          ) [NoMinusOpt]
+                                          BaseCall(
+                                            Designator(
+                                              DesignatorName(
+                                               jedan
+                                              ) [DesignatorName]
+                                              NoArrayOpt(
+                                              ) [NoArrayOpt]
+                                            ) [Designator]
+                                            NoCallOpt(
+                                            ) [NoCallOpt]
+                                          ) [BaseCall]
+                                        ) [Factor]
+                                      ) [SingleFactor]
+                                      MultOp(
+                                      ) [MultOp]
+                                      Factor(
+                                        NoMinusOpt(
+                                        ) [NoMinusOpt]
+                                        BaseConst(
+                                          ConstInt(
+                                           2
+                                          ) [ConstInt]
+                                        ) [BaseConst]
+                                      ) [Factor]
+                                    ) [MultipleFactors]
+                                  ) [SingleTerm]
+                                ) [NormalExpr]
+                              ) [ArrayOpt]
+                            ) [Designator]
+                            NoCallOpt(
+                            ) [NoCallOpt]
+                          ) [BaseCall]
+                        ) [Factor]
+                      ) [SingleFactor]
+                    ) [SingleTerm]
+                  ) [NormalExpr]
+                  NoPrintOpt(
+                  ) [NoPrintOpt]
+                ) [PrintSt]
+              ) [HaveStatements]
+              DesignatorSt(
+                DesignatorStatementV(
+                  Designator(
+                    DesignatorName(
+                     bodovi
+                    ) [DesignatorName]
+                    NoArrayOpt(
+                    ) [NoArrayOpt]
+                  ) [Designator]
+                  EqualAssign(
+                    NormalExpr(
+                      MultipleTerms(
+                        MultipleTerms(
+                          SingleTerm(
+                            SingleFactor(
+                              Factor(
+                                NoMinusOpt(
+                                ) [NoMinusOpt]
+                                BaseCall(
+                                  Designator(
+                                    DesignatorName(
+                                     bodovi
+                                    ) [DesignatorName]
+                                    NoArrayOpt(
+                                    ) [NoArrayOpt]
+                                  ) [Designator]
+                                  NoCallOpt(
+                                  ) [NoCallOpt]
+                                ) [BaseCall]
+                              ) [Factor]
+                            ) [SingleFactor]
+                          ) [SingleTerm]
+                          PlusOp(
+                          ) [PlusOp]
+                          MultipleFactors(
+                            SingleFactor(
+                              Factor(
+                                NoMinusOpt(
+                                ) [NoMinusOpt]
+                                BaseParens(
+                                  NormalExpr(
+                                    MultipleTerms(
+                                      SingleTerm(
+                                        MultipleFactors(
+                                          SingleFactor(
+                                            Factor(
+                                              NoMinusOpt(
+                                              ) [NoMinusOpt]
+                                              BaseCall(
+                                                Designator(
+                                                  DesignatorName(
+                                                   pet
+                                                  ) [DesignatorName]
+                                                  NoArrayOpt(
+                                                  ) [NoArrayOpt]
+                                                ) [Designator]
+                                                NoCallOpt(
+                                                ) [NoCallOpt]
+                                              ) [BaseCall]
+                                            ) [Factor]
+                                          ) [SingleFactor]
+                                          MultOp(
+                                          ) [MultOp]
+                                          Factor(
+                                            NoMinusOpt(
+                                            ) [NoMinusOpt]
+                                            BaseCall(
+                                              Designator(
+                                                DesignatorName(
+                                                 jedan
+                                                ) [DesignatorName]
+                                                NoArrayOpt(
+                                                ) [NoArrayOpt]
+                                              ) [Designator]
+                                              NoCallOpt(
+                                              ) [NoCallOpt]
+                                            ) [BaseCall]
+                                          ) [Factor]
+                                        ) [MultipleFactors]
+                                      ) [SingleTerm]
+                                      MinusOp(
+                                      ) [MinusOp]
+                                      SingleFactor(
+                                        Factor(
+                                          NoMinusOpt(
+                                          ) [NoMinusOpt]
+                                          BaseConst(
+                                            ConstInt(
+                                             1
+                                            ) [ConstInt]
+                                          ) [BaseConst]
+                                        ) [Factor]
+                                      ) [SingleFactor]
+                                    ) [MultipleTerms]
+                                  ) [NormalExpr]
+                                ) [BaseParens]
+                              ) [Factor]
+                            ) [SingleFactor]
+                            MultOp(
+                            ) [MultOp]
+                            Factor(
+                              NoMinusOpt(
+                              ) [NoMinusOpt]
+                              BaseCall(
+                                Designator(
+                                  DesignatorName(
+                                   bodovi
+                                  ) [DesignatorName]
+                                  NoArrayOpt(
+                                  ) [NoArrayOpt]
+                                ) [Designator]
+                                NoCallOpt(
+                                ) [NoCallOpt]
+                              ) [BaseCall]
+                            ) [Factor]
+                          ) [MultipleFactors]
+                        ) [MultipleTerms]
+                        MinusOp(
+                        ) [MinusOp]
+                        SingleFactor(
+                          Factor(
+                            NoMinusOpt(
+                            ) [NoMinusOpt]
+                            BaseParens(
+                              NormalExpr(
+                                MultipleTerms(
+                                  MultipleTerms(
+                                    SingleTerm(
+                                      MultipleFactors(
+                                        SingleFactor(
+                                          Factor(
+                                            NoMinusOpt(
+                                            ) [NoMinusOpt]
+                                            BaseConst(
+                                              ConstInt(
+                                               3
+                                              ) [ConstInt]
+                                            ) [BaseConst]
+                                          ) [Factor]
+                                        ) [SingleFactor]
+                                        ModOp(
+                                        ) [ModOp]
+                                        Factor(
+                                          NoMinusOpt(
+                                          ) [NoMinusOpt]
+                                          BaseConst(
+                                            ConstInt(
+                                             2
+                                            ) [ConstInt]
+                                          ) [BaseConst]
+                                        ) [Factor]
+                                      ) [MultipleFactors]
+                                    ) [SingleTerm]
+                                    PlusOp(
+                                    ) [PlusOp]
+                                    MultipleFactors(
+                                      SingleFactor(
+                                        Factor(
+                                          NoMinusOpt(
+                                          ) [NoMinusOpt]
+                                          BaseConst(
+                                            ConstInt(
+                                             3
+                                            ) [ConstInt]
+                                          ) [BaseConst]
+                                        ) [Factor]
+                                      ) [SingleFactor]
+                                      MultOp(
+                                      ) [MultOp]
+                                      Factor(
+                                        NoMinusOpt(
+                                        ) [NoMinusOpt]
+                                        BaseConst(
+                                          ConstInt(
+                                           2
+                                          ) [ConstInt]
+                                        ) [BaseConst]
+                                      ) [Factor]
+                                    ) [MultipleFactors]
+                                  ) [MultipleTerms]
+                                  MinusOp(
+                                  ) [MinusOp]
+                                  SingleFactor(
+                                    Factor(
+                                      NoMinusOpt(
+                                      ) [NoMinusOpt]
+                                      BaseConst(
+                                        ConstInt(
+                                         3
+                                        ) [ConstInt]
+                                      ) [BaseConst]
+                                    ) [Factor]
+                                  ) [SingleFactor]
+                                ) [MultipleTerms]
+                              ) [NormalExpr]
+                            ) [BaseParens]
+                          ) [Factor]
+                        ) [SingleFactor]
+                      ) [MultipleTerms]
+                    ) [NormalExpr]
+                  ) [EqualAssign]
+                ) [DesignatorStatementV]
+              ) [DesignatorSt]
+            ) [HaveStatements]
+            PrintSt(
+              NormalExpr(
+                SingleTerm(
+                  SingleFactor(
+                    Factor(
+                      NoMinusOpt(
+                      ) [NoMinusOpt]
+                      BaseCall(
+                        Designator(
+                          DesignatorName(
+                           bodovi
+                          ) [DesignatorName]
+                          NoArrayOpt(
+                          ) [NoArrayOpt]
+                        ) [Designator]
+                        NoCallOpt(
+                        ) [NoCallOpt]
+                      ) [BaseCall]
+                    ) [Factor]
+                  ) [SingleFactor]
+                ) [SingleTerm]
+              ) [NormalExpr]
+              NoPrintOpt(
+              ) [NoPrintOpt]
+            ) [PrintSt]
+          ) [HaveStatements]
+          ReadSt(
+            Designator(
+              DesignatorName(
+               bodovi
+              ) [DesignatorName]
+              NoArrayOpt(
+              ) [NoArrayOpt]
+            ) [Designator]
+          ) [ReadSt]
+        ) [HaveStatements]
+        PrintSt(
+          NormalExpr(
+            SingleTerm(
+              SingleFactor(
+                Factor(
+                  NoMinusOpt(
+                  ) [NoMinusOpt]
+                  BaseCall(
+                    Designator(
+                      DesignatorName(
+                       bodovi
+                      ) [DesignatorName]
+                      NoArrayOpt(
+                      ) [NoArrayOpt]
+                    ) [Designator]
+                    NoCallOpt(
+                    ) [NoCallOpt]
+                  ) [BaseCall]
+                ) [Factor]
+              ) [SingleFactor]
+            ) [SingleTerm]
+          ) [NormalExpr]
+          NoPrintOpt(
+          ) [NoPrintOpt]
+        ) [PrintSt]
+      ) [HaveStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+ERROR 22:56:00,201 - Dodela nije moguca, tipovi nisu kompatibilni na liniji 24
+ERROR 22:56:00,201 - Dodela nije moguca, tipovi nisu kompatibilni na liniji 25
+ERROR 22:56:00,201 - Niz moze da se indeksira samo integerima na liniji 5
+ERROR 22:56:00,201 - Niz moze da se indeksira samo integerima na liniji 23
+ERROR 22:56:00,201 - Racunske operacije mogu da se vrse samo nad integerima na liniji 18
+ERROR 22:56:00,202 - Dodela nije moguca, tipovi nisu kompatibilni na liniji 26
+ERROR 22:56:00,202 - Racunske operacije mogu da se vrse samo nad integerima na liniji 9
+ERROR 22:56:00,202 - Dodela nije moguca, tipovi nisu kompatibilni na liniji 27
+ERROR 22:56:00,203 - Nije moguce stampati promenjive koje nisu tipa integer,char ili bool na liniji 7
+ERROR 22:56:00,203 - Dodela nije moguca, tipovi nisu kompatibilni na liniji 33
+ERROR 22:56:00,203 - Dodela nije moguca, tipovi nisu kompatibilni na liniji 34
+ERROR 22:56:00,203 - Dodela nije moguca, tipovi nisu kompatibilni na liniji 35
+ERROR 22:56:00,203 - Nije moguce stampati promenjive koje nisu tipa integer,char ili bool na liniji 7
+ERROR 22:56:00,203 - Nije moguce stampati promenjive koje nisu tipa integer,char ili bool na liniji 7
+INFO  22:56:00,204 - Print calls = 0
+ERROR 22:56:00,204 - Parsiranje NIJE uspesno zavrseno!

@@ -1,0 +1,497 @@
+INFO  21:36:24,348 - Compiling source file: C:\Users\mm170466d\Desktop\PP1\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  21:36:24,386 - #6 program
+INFO  21:36:24,386 - #2 MJProgram
+INFO  21:36:24,386 - #2 int
+INFO  21:36:24,387 - #2 x
+INFO  21:36:24,389 - #9 ;
+INFO  21:36:24,389 - #24 const
+INFO  21:36:24,391 - #2 int
+INFO  21:36:24,391 - #2 y
+INFO  21:36:24,391 - #10 =
+INFO  21:36:24,391 - #3 4
+INFO  21:36:24,391 - #9 ;
+INFO  21:36:24,392 - #7 {
+INFO  21:36:24,394 - #2 int
+INFO  21:36:24,395 - #2 k
+INFO  21:36:24,395 - #17 (
+INFO  21:36:24,396 - #2 int
+INFO  21:36:24,396 - #2 a
+INFO  21:36:24,396 - #23 ,
+INFO  21:36:24,396 - #2 int
+INFO  21:36:24,397 - #2 b
+INFO  21:36:24,397 - #18 )
+INFO  21:36:24,400 - #2 int
+INFO  21:36:24,400 - #2 c
+INFO  21:36:24,401 - #19 [
+INFO  21:36:24,401 - #20 ]
+INFO  21:36:24,401 - #9 ;
+INFO  21:36:24,401 - #7 {
+INFO  21:36:24,401 - #2 c
+INFO  21:36:24,402 - #10 =
+INFO  21:36:24,403 - #3 1
+INFO  21:36:24,404 - #9 ;
+INFO  21:36:24,406 - #28 return
+INFO  21:36:24,406 - #2 c
+INFO  21:36:24,406 - #11 +
+INFO  21:36:24,407 - #3 1
+INFO  21:36:24,408 - #9 ;
+INFO  21:36:24,410 - #8 }
+INFO  21:36:24,412 - #27 void
+INFO  21:36:24,413 - #2 main
+INFO  21:36:24,414 - #17 (
+INFO  21:36:24,415 - #18 )
+INFO  21:36:24,416 - #7 {
+INFO  21:36:24,416 - #2 y
+INFO  21:36:24,416 - #10 =
+INFO  21:36:24,416 - #3 2
+INFO  21:36:24,416 - #9 ;
+INFO  21:36:24,417 - #2 x
+INFO  21:36:24,417 - #10 =
+INFO  21:36:24,421 - #2 y
+INFO  21:36:24,421 - #11 +
+INFO  21:36:24,422 - #3 2
+INFO  21:36:24,422 - #9 ;
+INFO  21:36:24,422 - #2 y
+INFO  21:36:24,422 - #10 =
+INFO  21:36:24,422 - #2 k
+INFO  21:36:24,423 - #17 (
+INFO  21:36:24,423 - #18 )
+INFO  21:36:24,424 - #11 +
+INFO  21:36:24,424 - #3 3
+INFO  21:36:24,424 - #9 ;
+INFO  21:36:24,425 - #25 print
+INFO  21:36:24,425 - #17 (
+INFO  21:36:24,426 - #2 y
+INFO  21:36:24,427 - #18 )
+INFO  21:36:24,431 - #9 ;
+INFO  21:36:24,432 - #25 print
+INFO  21:36:24,432 - #17 (
+INFO  21:36:24,432 - #12 -
+INFO  21:36:24,432 - #3 3
+INFO  21:36:24,433 - #18 )
+INFO  21:36:24,433 - #9 ;
+INFO  21:36:24,433 - #25 print
+INFO  21:36:24,434 - #17 (
+INFO  21:36:24,434 - #12 -
+INFO  21:36:24,434 - #4 true
+INFO  21:36:24,434 - #18 )
+INFO  21:36:24,434 - #9 ;
+INFO  21:36:24,434 - #28 return
+INFO  21:36:24,434 - #3 0
+INFO  21:36:24,435 - #9 ;
+INFO  21:36:24,435 - #8 }
+INFO  21:36:24,435 - #8 }
+INFO  21:36:24,437 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  DeclsList(
+    DeclsList(
+      NoDeclList(
+      ) [NoDeclList]
+      DeclarationVar(
+        VarDeclV(
+          StandardType(
+           int
+          ) [StandardType]
+          SingleVariable(
+            VariableNormal(
+             x
+            ) [VariableNormal]
+          ) [SingleVariable]
+        ) [VarDeclV]
+      ) [DeclarationVar]
+    ) [DeclsList]
+    DeclarationConst(
+      ConstDecl(
+        StandardType(
+         int
+        ) [StandardType]
+        SingleConstant(
+          Constant(
+           y
+            ConstInt(
+             4
+            ) [ConstInt]
+          ) [Constant]
+        ) [SingleConstant]
+      ) [ConstDecl]
+    ) [DeclarationConst]
+  ) [DeclsList]
+  MethodDeclarations(
+    MethodDeclarations(
+      NoMetDecl(
+      ) [NoMetDecl]
+      MethodDecl(
+        StandardTypes(
+          StandardType(
+           int
+          ) [StandardType]
+        ) [StandardTypes]
+        MethodName(
+         k
+        ) [MethodName]
+        HaveFormParams(
+          MultipleFormParams(
+            SingleFormParam(
+              FormParamNormal(
+                StandardType(
+                 int
+                ) [StandardType]
+               a
+              ) [FormParamNormal]
+            ) [SingleFormParam]
+            FormParamNormal(
+              StandardType(
+               int
+              ) [StandardType]
+             b
+            ) [FormParamNormal]
+          ) [MultipleFormParams]
+        ) [HaveFormParams]
+        DeclsList(
+          NoDeclList(
+          ) [NoDeclList]
+          DeclarationVar(
+            VarDeclV(
+              StandardType(
+               int
+              ) [StandardType]
+              SingleVariable(
+                VariableArray(
+                 c
+                ) [VariableArray]
+              ) [SingleVariable]
+            ) [VarDeclV]
+          ) [DeclarationVar]
+        ) [DeclsList]
+        HaveStatements(
+          HaveStatements(
+            NoStatements(
+            ) [NoStatements]
+            DesignatorSt(
+              DesignatorStatementV(
+                Designator(
+                  DesignatorName(
+                   c
+                  ) [DesignatorName]
+                  NoArrayOpt(
+                  ) [NoArrayOpt]
+                ) [Designator]
+                EqualAssign(
+                  NormalExpr(
+                    SingleTerm(
+                      SingleFactor(
+                        Factor(
+                          NoMinusOpt(
+                          ) [NoMinusOpt]
+                          BaseConst(
+                            ConstInt(
+                             1
+                            ) [ConstInt]
+                          ) [BaseConst]
+                        ) [Factor]
+                      ) [SingleFactor]
+                    ) [SingleTerm]
+                  ) [NormalExpr]
+                ) [EqualAssign]
+              ) [DesignatorStatementV]
+            ) [DesignatorSt]
+          ) [HaveStatements]
+          ReturnSt(
+            ReturnOpt(
+              NormalExpr(
+                MultipleTerms(
+                  SingleTerm(
+                    SingleFactor(
+                      Factor(
+                        NoMinusOpt(
+                        ) [NoMinusOpt]
+                        BaseCall(
+                          Designator(
+                            DesignatorName(
+                             c
+                            ) [DesignatorName]
+                            NoArrayOpt(
+                            ) [NoArrayOpt]
+                          ) [Designator]
+                          NoCallOpt(
+                          ) [NoCallOpt]
+                        ) [BaseCall]
+                      ) [Factor]
+                    ) [SingleFactor]
+                  ) [SingleTerm]
+                  PlusOp(
+                  ) [PlusOp]
+                  SingleFactor(
+                    Factor(
+                      NoMinusOpt(
+                      ) [NoMinusOpt]
+                      BaseConst(
+                        ConstInt(
+                         1
+                        ) [ConstInt]
+                      ) [BaseConst]
+                    ) [Factor]
+                  ) [SingleFactor]
+                ) [MultipleTerms]
+              ) [NormalExpr]
+            ) [ReturnOpt]
+          ) [ReturnSt]
+        ) [HaveStatements]
+      ) [MethodDecl]
+    ) [MethodDeclarations]
+    MethodDecl(
+      VoidType(
+      ) [VoidType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoFormParams(
+      ) [NoFormParams]
+      NoDeclList(
+      ) [NoDeclList]
+      HaveStatements(
+        HaveStatements(
+          HaveStatements(
+            HaveStatements(
+              HaveStatements(
+                HaveStatements(
+                  HaveStatements(
+                    NoStatements(
+                    ) [NoStatements]
+                    DesignatorSt(
+                      DesignatorStatementV(
+                        Designator(
+                          DesignatorName(
+                           y
+                          ) [DesignatorName]
+                          NoArrayOpt(
+                          ) [NoArrayOpt]
+                        ) [Designator]
+                        EqualAssign(
+                          NormalExpr(
+                            SingleTerm(
+                              SingleFactor(
+                                Factor(
+                                  NoMinusOpt(
+                                  ) [NoMinusOpt]
+                                  BaseConst(
+                                    ConstInt(
+                                     2
+                                    ) [ConstInt]
+                                  ) [BaseConst]
+                                ) [Factor]
+                              ) [SingleFactor]
+                            ) [SingleTerm]
+                          ) [NormalExpr]
+                        ) [EqualAssign]
+                      ) [DesignatorStatementV]
+                    ) [DesignatorSt]
+                  ) [HaveStatements]
+                  DesignatorSt(
+                    DesignatorStatementV(
+                      Designator(
+                        DesignatorName(
+                         x
+                        ) [DesignatorName]
+                        NoArrayOpt(
+                        ) [NoArrayOpt]
+                      ) [Designator]
+                      EqualAssign(
+                        NormalExpr(
+                          MultipleTerms(
+                            SingleTerm(
+                              SingleFactor(
+                                Factor(
+                                  NoMinusOpt(
+                                  ) [NoMinusOpt]
+                                  BaseCall(
+                                    Designator(
+                                      DesignatorName(
+                                       y
+                                      ) [DesignatorName]
+                                      NoArrayOpt(
+                                      ) [NoArrayOpt]
+                                    ) [Designator]
+                                    NoCallOpt(
+                                    ) [NoCallOpt]
+                                  ) [BaseCall]
+                                ) [Factor]
+                              ) [SingleFactor]
+                            ) [SingleTerm]
+                            PlusOp(
+                            ) [PlusOp]
+                            SingleFactor(
+                              Factor(
+                                NoMinusOpt(
+                                ) [NoMinusOpt]
+                                BaseConst(
+                                  ConstInt(
+                                   2
+                                  ) [ConstInt]
+                                ) [BaseConst]
+                              ) [Factor]
+                            ) [SingleFactor]
+                          ) [MultipleTerms]
+                        ) [NormalExpr]
+                      ) [EqualAssign]
+                    ) [DesignatorStatementV]
+                  ) [DesignatorSt]
+                ) [HaveStatements]
+                DesignatorSt(
+                  DesignatorStatementV(
+                    Designator(
+                      DesignatorName(
+                       y
+                      ) [DesignatorName]
+                      NoArrayOpt(
+                      ) [NoArrayOpt]
+                    ) [Designator]
+                    EqualAssign(
+                      NormalExpr(
+                        MultipleTerms(
+                          SingleTerm(
+                            SingleFactor(
+                              Factor(
+                                NoMinusOpt(
+                                ) [NoMinusOpt]
+                                BaseCall(
+                                  Designator(
+                                    DesignatorName(
+                                     k
+                                    ) [DesignatorName]
+                                    NoArrayOpt(
+                                    ) [NoArrayOpt]
+                                  ) [Designator]
+                                  CallOpt(
+                                    NoActParam(
+                                    ) [NoActParam]
+                                  ) [CallOpt]
+                                ) [BaseCall]
+                              ) [Factor]
+                            ) [SingleFactor]
+                          ) [SingleTerm]
+                          PlusOp(
+                          ) [PlusOp]
+                          SingleFactor(
+                            Factor(
+                              NoMinusOpt(
+                              ) [NoMinusOpt]
+                              BaseConst(
+                                ConstInt(
+                                 3
+                                ) [ConstInt]
+                              ) [BaseConst]
+                            ) [Factor]
+                          ) [SingleFactor]
+                        ) [MultipleTerms]
+                      ) [NormalExpr]
+                    ) [EqualAssign]
+                  ) [DesignatorStatementV]
+                ) [DesignatorSt]
+              ) [HaveStatements]
+              PrintSt(
+                NormalExpr(
+                  SingleTerm(
+                    SingleFactor(
+                      Factor(
+                        NoMinusOpt(
+                        ) [NoMinusOpt]
+                        BaseCall(
+                          Designator(
+                            DesignatorName(
+                             y
+                            ) [DesignatorName]
+                            NoArrayOpt(
+                            ) [NoArrayOpt]
+                          ) [Designator]
+                          NoCallOpt(
+                          ) [NoCallOpt]
+                        ) [BaseCall]
+                      ) [Factor]
+                    ) [SingleFactor]
+                  ) [SingleTerm]
+                ) [NormalExpr]
+                NoPrintOpt(
+                ) [NoPrintOpt]
+              ) [PrintSt]
+            ) [HaveStatements]
+            PrintSt(
+              NormalExpr(
+                SingleTerm(
+                  SingleFactor(
+                    Factor(
+                      MinusOpt(
+                      ) [MinusOpt]
+                      BaseConst(
+                        ConstInt(
+                         3
+                        ) [ConstInt]
+                      ) [BaseConst]
+                    ) [Factor]
+                  ) [SingleFactor]
+                ) [SingleTerm]
+              ) [NormalExpr]
+              NoPrintOpt(
+              ) [NoPrintOpt]
+            ) [PrintSt]
+          ) [HaveStatements]
+          PrintSt(
+            NormalExpr(
+              SingleTerm(
+                SingleFactor(
+                  Factor(
+                    MinusOpt(
+                    ) [MinusOpt]
+                    BaseConst(
+                      ConstBool(
+                       true
+                      ) [ConstBool]
+                    ) [BaseConst]
+                  ) [Factor]
+                ) [SingleFactor]
+              ) [SingleTerm]
+            ) [NormalExpr]
+            NoPrintOpt(
+            ) [NoPrintOpt]
+          ) [PrintSt]
+        ) [HaveStatements]
+        ReturnSt(
+          ReturnOpt(
+            NormalExpr(
+              SingleTerm(
+                SingleFactor(
+                  Factor(
+                    NoMinusOpt(
+                    ) [NoMinusOpt]
+                    BaseConst(
+                      ConstInt(
+                       0
+                      ) [ConstInt]
+                    ) [BaseConst]
+                  ) [Factor]
+                ) [SingleFactor]
+              ) [SingleTerm]
+            ) [NormalExpr]
+          ) [ReturnOpt]
+        ) [ReturnSt]
+      ) [HaveStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+ERROR 21:36:24,451 - Simbol je niz, a nije pristupljeno njegovom elementu na liniji 6
+ERROR 21:36:24,453 - Dodela nije moguca, tipovi nisu kompatibilni na liniji 6
+ERROR 21:36:24,453 - Simbol je niz, a nije pristupljeno njegovom elementu na liniji 7
+ERROR 21:36:24,454 - Racunske operacije mogu da se vrse samo nad integerima na liniji 2
+ERROR 21:36:24,454 - Return vraca tip koji je razlicit ot metodinog povratnog tipa na liniji 2
+ERROR 21:36:24,455 - Ne moze da se izvrsi dodela simbolu na liniji 11
+ERROR 21:36:24,455 - Pozivi metoda nisi podrzani na liniji 13
+ERROR 21:36:24,455 - Racunske operacije mogu da se vrse samo nad integerima na liniji 4
+ERROR 21:36:24,455 - Ne moze da se izvrsi dodela simbolu na liniji 13
+ERROR 21:36:24,455 - Dodela nije moguca, tipovi nisu kompatibilni na liniji 13
+ERROR 21:36:24,455 - Negacija vrednosti koja nije integer na liniji 16
+ERROR 21:36:24,455 - Nije moguce stampati promenjive koje nisu tipa integer,char ili bool na liniji 16
+ERROR 21:36:24,456 - Return vraca tip koji je razlicit ot metodinog povratnog tipa na liniji 2
+INFO  21:36:24,456 - Print calls = 0
+ERROR 21:36:24,456 - Parsiranje NIJE uspesno zavrseno!

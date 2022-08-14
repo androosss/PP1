@@ -55,8 +55,8 @@ scan with {:
 
 terminal String IDENT;
 terminal Integer NUMBER;
-terminal Integer BOOL;
-terminal Character CHAR;
+terminal String BOOL;
+terminal String CHAR;
 
 terminal PROG, LBRACE, RBRACE, SEMI, EQUAL, PLUS, MINUS, MUL, DIV, MOD, NOTZERO, LPAREN, RPAREN, LANGLE, RANGLE;
 terminal PLUSPLUS, MINUSMINUS, COMMA, CONST, PRINT, READ, VOID, RETURN,NEW;
@@ -70,11 +70,9 @@ nonterminal VarDecl VarDecl;
 nonterminal ConstDecl ConstDecl;
 nonterminal Variables Variables;
 nonterminal Type Type;
-nonterminal StandardType StandardType;
 nonterminal Variable Variable;
 nonterminal Constants Constants;
 nonterminal Constant Constant;
-nonterminal ConstantValues ConstantValues;
 nonterminal MethodDecl MethodDecl;
 nonterminal MethodName MethodName;
 nonterminal FormParams FormParams;
@@ -82,22 +80,27 @@ nonterminal StatementList StatementList;
 nonterminal FormParamList FormParamList;
 nonterminal FormParam FormParam;
 nonterminal Statement Statement;
-nonterminal Designator Designator;
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal PrintOptional PrintOptional;
 nonterminal ReturnOptional ReturnOptional;
 nonterminal RightSide RightSide;
 nonterminal DesignatorName DesignatorName;
 nonterminal ArrayOptional ArrayOptional;
-nonterminal Expr Expr;
-nonterminal Term Term;
-nonterminal Factor Factor;
 nonterminal MinusOptional MinusOptional;
-nonterminal BaseFactor BaseFactor;
 nonterminal CallOptional CallOptional;
 nonterminal ActParams ActParams;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct ExprWrapper;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Term;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct BaseFactor;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct ConstantValues;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct StandardType;
 
 
 Program ::= (Program) PROG ProgName:P1 DeclList:D2 LBRACE MethodDeclList:M3 RBRACE {: RESULT=new Program(P1, D2, M3); RESULT.setLine(P1left); :};
@@ -184,7 +187,7 @@ Statement ::= (DesignatorSt) DesignatorStatement:D1 SEMI {: RESULT=new Designato
 			  |
 			  (ReadSt) READ LPAREN Designator:D1 RPAREN SEMI {: RESULT=new ReadSt(D1); RESULT.setLine(D1left); :}
 			  |
-			  (PrintSt) PRINT LPAREN Expr:E1 PrintOptional:P2 RPAREN SEMI {: RESULT=new PrintSt(E1, P2); RESULT.setLine(E1left); :}
+			  (PrintSt) PRINT LPAREN ExprWrapper:E1 PrintOptional:P2 RPAREN SEMI {: RESULT=new PrintSt(E1, P2); RESULT.setLine(E1left); :}
 			  |
 			  (ReturnSt) RETURN ReturnOptional:R1 SEMI {: RESULT=new ReturnSt(R1); RESULT.setLine(R1left); :}
 			  |
@@ -196,7 +199,7 @@ PrintOptional ::= (PrintOpt) SEMI NUMBER:N1 {: RESULT=new PrintOpt(N1); RESULT.s
 				  (NoPrintOpt) {: RESULT=new NoPrintOpt(); :} /* epsilon */
 				  ;
 				  
-ReturnOptional ::= (ReturnOpt) Expr:E1 {: RESULT=new ReturnOpt(E1); RESULT.setLine(E1left); :}
+ReturnOptional ::= (ReturnOpt) ExprWrapper:E1 {: RESULT=new ReturnOpt(E1); RESULT.setLine(E1left); :}
 				   |
 				   (NoReturnOpt) {: RESULT=new NoReturnOpt(); :} /* epsilon */
 				   ;
@@ -210,17 +213,22 @@ Designator ::= (Designator) DesignatorName:D1 ArrayOptional:A2 {: RESULT=new Des
 
 DesignatorName ::= (DesignatorName) IDENT:designatorName {: RESULT=new DesignatorName(designatorName); RESULT.setLine(designatorNameleft); :};
 			  
-ArrayOptional ::= (ArrayOpt) LANGLE Expr:E1 RANGLE {: RESULT=new ArrayOpt(E1); RESULT.setLine(E1left); :}
+ArrayOptional ::= (ArrayOpt) LANGLE ExprWrapper:E1 RANGLE {: RESULT=new ArrayOpt(E1); RESULT.setLine(E1left); :}
 				  |
 				  (NoArrayOpt) {: RESULT=new NoArrayOpt(); :} /* epsilon */
 				  ;
 			
-RightSide ::= (EqualAssign) EQUAL Expr:E1 {: RESULT=new EqualAssign(E1); RESULT.setLine(E1left); :}
+RightSide ::= (EqualAssign) EQUAL ExprWrapper:E1 {: RESULT=new EqualAssign(E1); RESULT.setLine(E1left); :}
 			  |
 			  (PlusPlus) PLUSPLUS {: RESULT=new PlusPlus(); :}
 			  |
 			  (MinusMinus) MINUSMINUS {: RESULT=new MinusMinus(); :}
 			  ;
+			  
+ExprWrapper ::= (NormalExpr) Expr:E1 {: RESULT=new NormalExpr(E1); RESULT.setLine(E1left); :}
+				|
+				(NotZeroExpr) Expr:E1 NOTZERO Expr:E2 {: RESULT=new NotZeroExpr(E1, E2); RESULT.setLine(E1left); :}
+				;
 			 
 Expr ::= (MultipleTerms) Expr:E1 Addop:A2 Term:T3 {: RESULT=new MultipleTerms(E1, A2, T3); RESULT.setLine(E1left); :}
 		 |
@@ -245,7 +253,7 @@ BaseFactor ::= (BaseCall) Designator:D1 CallOptional:C2 {: RESULT=new BaseCall(D
 			   |
 			   (BaseNew) NEW StandardType:S1 ArrayOptional:A2 {: RESULT=new BaseNew(S1, A2); RESULT.setLine(S1left); :}
 			   |
-			   (BaseParens) LPAREN Expr:E1 RPAREN {: RESULT=new BaseParens(E1); RESULT.setLine(E1left); :}
+			   (BaseParens) LPAREN ExprWrapper:E1 RPAREN {: RESULT=new BaseParens(E1); RESULT.setLine(E1left); :}
 			   ;
 			 
 CallOptional ::= (CallOpt) LPAREN ActParams:A1 RPAREN {: RESULT=new CallOpt(A1); RESULT.setLine(A1left); :}
@@ -253,7 +261,7 @@ CallOptional ::= (CallOpt) LPAREN ActParams:A1 RPAREN {: RESULT=new CallOpt(A1);
 				 (NoCallOpt) {: RESULT=new NoCallOpt(); :} /* epsilon */
 				 ;
 				 
-ActParams ::= (HaveActParams) ActParams:A1 COMMA Expr:E2 {: RESULT=new HaveActParams(A1, E2); RESULT.setLine(A1left); :}
+ActParams ::= (HaveActParams) ActParams:A1 COMMA ExprWrapper:E2 {: RESULT=new HaveActParams(A1, E2); RESULT.setLine(A1left); :}
 			  |
 			  (NoActParam) {: RESULT=new NoActParam(); :} /* epsilon */
 			  ;

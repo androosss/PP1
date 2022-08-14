@@ -1,0 +1,253 @@
+package rs.ac.bg.etf.pp1;
+
+import java_cup.runtime.*;
+import org.apache.log4j.*;
+
+// import java.io.*;
+import rs.ac.bg.etf.pp1.ast.*;
+
+
+parser code {:
+	
+	boolean errorDetected = false;
+	
+	Logger log = Logger.getLogger(getClass());
+   
+   
+    // slede redefinisani metodi za prijavu gresaka radi izmene teksta poruke
+     
+    public void report_fatal_error(String message, Object info) throws java.lang.Exception {
+      done_parsing();
+      report_error(message, info);
+    }
+  
+    public void syntax_error(Symbol cur_token) {
+        report_error("\nSintaksna greska", cur_token);
+    }
+  
+    public void unrecovered_syntax_error(Symbol cur_token) throws java.lang.Exception {
+        report_fatal_error("Fatalna greska, parsiranje se ne moze nastaviti", cur_token);
+    }
+
+    public void report_error(String message, Object info) {
+    	errorDetected = true;
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.error(msg.toString());
+    }
+    
+    public void report_info(String message, Object info) {
+    	StringBuilder msg = new StringBuilder(message); 
+    	if (info instanceof Symbol)
+            msg.append (" na liniji ").append(((Symbol)info).left);
+        log.info(msg.toString());
+    }
+    
+:}
+
+scan with {:
+	Symbol s = this.getScanner().next_token();
+	if (s != null && s.value != null) 
+		log.info(s.toString() + " " + s.value.toString());
+	return s;
+:}
+
+terminal String IDENT;
+terminal Integer NUMBER;
+terminal Integer BOOL;
+terminal Character CHAR;
+
+terminal PROG, LBRACE, RBRACE, SEMI, EQUAL, PLUS, MINUS, MUL, DIV, MOD, NOTZERO, LPAREN, RPAREN, LANGLE, RANGLE;
+terminal PLUSPLUS, MINUSMINUS, COMMA, CONST, PRINT, READ, VOID, RETURN,NEW;
+
+nonterminal Program, ProgName, DeclList, MethodDeclList;
+nonterminal Declaration, VarDecl, ConstDecl;
+nonterminal Variables, Type, StandardType, Variable;
+nonterminal Constants, Constant, ConstantValues;
+nonterminal MethodDecl, MethodName, FormParams, StatementList;
+nonterminal FormParamList, FormParam;
+nonterminal Statement, Designator, DesignatorStatement, PrintOptional, ReturnOptional;
+nonterminal RightSide, DesignatorName, ArrayOptional;
+nonterminal ExprWrapper, Expr, Term, MinusOptional;
+nonterminal CallOptional, ActParams;
+nonterminal Addop, Mulop;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct BaseFactor;
+
+
+Program ::= (Program) PROG ProgName DeclList LBRACE MethodDeclList RBRACE;
+
+ProgName ::= (ProgName) IDENT:progName;
+
+DeclList ::= (DeclsList) DeclList Declaration
+			 |
+			 (NoDeclList) /* epsilon */
+			 ;
+		
+Declaration ::= (DeclarationVar) VarDecl
+				|
+				(DeclarationConst) ConstDecl
+				|
+				(DeclarationErr) error SEMI:l {: parser.report_error("Sintaksa greska deklaracije promenljive na liniji " + lleft, null); :}
+				; 
+				
+VarDecl ::= (VarDeclV) StandardType Variables SEMI;
+
+Type ::= (StandardTypes) StandardType
+		 |
+		 (VoidType) VOID
+		 ;
+		 
+StandardType ::= (StandardType) IDENT:typeName;
+
+Variables ::= (VariablesList) Variables COMMA Variable
+			  |
+			  (SingleVariable) Variable
+			  ;				  
+			  
+Variable ::= (VariableNormal) IDENT:varName
+			 |
+			 (VariableArray) IDENT:varName LANGLE RANGLE
+			 ;
+			 	
+ConstDecl ::= (ConstDecl) CONST StandardType Constants SEMI;
+
+Constants ::= (MultipleConstants) Constants COMMA Constant
+			  |
+			  (SingleConstant) Constant
+			  ;	 
+
+Constant ::= (Constant) IDENT:constName EQUAL ConstantValues;
+
+ConstantValues ::= (ConstInt) NUMBER
+				   |
+				   (ConstBool) BOOL
+				   |
+				   (ConstChar) CHAR
+				   ;
+				   
+MethodDeclList ::= (MethodDeclarations) MethodDeclList MethodDecl
+				   |
+				   (NoMetDecl) /* epsilon */
+				   ;
+
+MethodDecl ::= (MethodDecl) Type MethodName LPAREN FormParams RPAREN DeclList LBRACE StatementList RBRACE;
+
+MethodName ::= (MethodName) IDENT:methodName;
+
+FormParams ::= (HaveFormParams) FormParamList
+			   |
+			   (NoFormParams) /* epsilon */
+			   ;
+			 
+FormParamList ::= (MultipleFormParams) FormParamList COMMA FormParam
+				  |
+				  (SingleFormParam) FormParam
+				  ;
+				  
+FormParam ::= (FormParamNormal) StandardType IDENT:formParamName
+			  |
+			  (FormParamArray) StandardType IDENT:formParamName LANGLE RANGLE
+			  ;
+
+StatementList ::= (HaveStatements) StatementList Statement
+				  |
+				  (NoStatements) /* epsilon */
+				  ;
+				  
+Statement ::= (DesignatorSt) DesignatorStatement SEMI
+			  |
+			  (ReadSt) READ LPAREN Designator RPAREN SEMI
+			  |
+			  (PrintSt) PRINT LPAREN ExprWrapper PrintOptional RPAREN SEMI
+			  |
+			  (ReturnSt) RETURN ReturnOptional SEMI
+			  |
+			  (StBlock) LBRACE StatementList RBRACE
+			  ;
+			  
+PrintOptional ::= (PrintOpt) SEMI NUMBER
+				  |
+				  (NoPrintOpt) /* epsilon */
+				  ;
+				  
+ReturnOptional ::= (ReturnOpt) ExprWrapper
+				   |
+				   (NoReturnOpt) /* epsilon */
+				   ;
+				   
+DesignatorStatement ::= (DesignatorStatementV) Designator RightSide
+						|
+			 			(DesignatorError) error:l {: parser.report_error("Sintaksa greska dodele promenljivoj na liniji " + lleft, null); :}
+			 			;
+
+Designator ::= (Designator) DesignatorName ArrayOptional;
+
+DesignatorName ::= (DesignatorName) IDENT:designatorName;
+			  
+ArrayOptional ::= (ArrayOpt) LANGLE ExprWrapper RANGLE
+				  |
+				  (NoArrayOpt) /* epsilon */
+				  ;
+			
+RightSide ::= (EqualAssign) EQUAL ExprWrapper
+			  |
+			  (PlusPlus) PLUSPLUS
+			  |
+			  (MinusMinus) MINUSMINUS
+			  ;
+			  
+ExprWrapper ::= (NormalExpr) Expr
+				|
+				(NotZeroExpr) Expr NOTZERO Expr
+				;
+			 
+Expr ::= (MultipleTerms) Expr Addop Term
+		 |
+		 (SingleTerm) Term
+		 ;
+		 
+Term ::= (MultipleFactors) Term Mulop Factor
+		 |
+		 (SingleFactor) Factor
+		 ;
+	
+Factor ::= (Factor) MinusOptional BaseFactor;
+
+MinusOptional ::= (MinusOpt) MINUS
+				  |
+				  (NoMinusOpt) /* epsilon */
+				  ;
+
+BaseFactor ::= (BaseCall) Designator CallOptional
+			   |
+			   (BaseConst) ConstantValues
+			   |
+			   (BaseNew) NEW StandardType ArrayOptional
+			   |
+			   (BaseParens) LPAREN ExprWrapper RPAREN
+			   ;
+			 
+CallOptional ::= (CallOpt) LPAREN ActParams RPAREN
+				 |
+				 (NoCallOpt) /* epsilon */
+				 ;
+				 
+ActParams ::= (HaveActParams) ActParams COMMA ExprWrapper
+			  |
+			  (NoActParam) /* epsilon */
+			  ;
+		
+Addop ::= (PlusOp) PLUS
+		  | 
+		  (MinusOp) MINUS
+		  ;
+		  
+Mulop ::= (MultOp) MUL
+		  |
+		  (DivOp) DIV
+		  |
+		  (ModOp) MOD
+		  ;

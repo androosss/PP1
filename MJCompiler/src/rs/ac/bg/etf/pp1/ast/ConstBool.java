@@ -1,23 +1,23 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/7/2022 18:40:30
+// 14/7/2022 22:17:41
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ConstBool extends ConstantValues {
 
-    private Integer B1;
+    private String B1;
 
-    public ConstBool (Integer B1) {
+    public ConstBool (String B1) {
         this.B1=B1;
     }
 
-    public Integer getB1() {
+    public String getB1() {
         return B1;
     }
 
-    public void setB1(Integer B1) {
+    public void setB1(String B1) {
         this.B1=B1;
     }
 

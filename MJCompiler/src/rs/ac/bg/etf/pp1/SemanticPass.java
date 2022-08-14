@@ -25,6 +25,38 @@ public class SemanticPass extends VisitorAdaptor {
 	private boolean mainExists=false;
 	private int fpCnt=0;
 	
+	public String toString(Struct struct) {
+		String ret="";
+		switch(struct.getKind()){
+		case 0:
+			ret+="void";
+			break;
+		case 1:
+			ret+="int";
+			break;
+		case 2:
+			ret+="char";
+			break;
+		case 3:
+			ret+="array";
+			ret+="["+toString(struct.getElemType())+"]";
+			break;
+		case 4:
+			ret+="class";
+			break;
+		case 5:
+			ret+="bool";
+			break;
+		case 6:
+			ret+="enum";
+			break;
+		case 7:
+			ret+="interface";
+			break;
+		}
+		return ret;
+	}
+	
 	public void report_error(String message, SyntaxNode info) {
 		errorDetected = true;
 		StringBuilder msg = new StringBuilder(message);
@@ -91,6 +123,7 @@ public class SemanticPass extends VisitorAdaptor {
 			return;
 		}
 		currentType = typeObj.getType();
+		standardType.struct=currentType;
 	}
 	
 	public void visit(VoidType voidType) {
@@ -116,20 +149,23 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(ConstBool constBool) {
-		constVal = constBool.getB1(); 
+		constVal = constBool.getB1()=="true"?1:0;//constBool.getB1(); 
 		constType = boolType;
+		constBool.struct=boolType;
 	}
 	
 	@Override
 	public void visit(ConstChar constChar) {
-		constVal = constChar.getC1(); 
+		constVal = constChar.getC1().charAt(1);//constChar.getC1(); 
 		constType = Tab.charType;
+		constChar.struct= Tab.charType;
 	}
 	
 	@Override
 	public void visit(ConstInt constInt) {
 		constVal = constInt.getN1(); 
 		constType = Tab.intType;
+		constInt.struct= Tab.intType;
 	}
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -207,22 +243,188 @@ public class SemanticPass extends VisitorAdaptor {
 	//CONTEXT CONDITIONS
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	
-	/*@Override
-	public void visit(Constant constant) {
-		
+	@Override
+	public void visit(BaseConst baseConst) {
+		baseConst.struct=baseConst.getConstantValues().struct;
 	}
 	
 	@Override
-	public void visit(Constant constant) {
-		
+	public void visit(BaseCall baseCall) {
+		if(baseCall.getCallOptional() instanceof CallOpt) {
+			report_error("Pozivi metoda nisi podrzani",baseCall);
+			baseCall.struct=Tab.noType;
+		} else {
+			if(baseCall.getDesignator().obj.getType().getKind()!=Struct.Array) {
+				baseCall.struct=baseCall.getDesignator().obj.getType();
+			} else {
+				if(baseCall.getDesignator().getArrayOptional() instanceof ArrayOpt)
+					baseCall.struct=baseCall.getDesignator().obj.getType().getElemType();
+				else {
+					baseCall.struct=baseCall.getDesignator().obj.getType();
+				}
+			}
+		}
 	}
-	
 	
 	@Override
-	public void visit(Constant constant) {
-		
+	public void visit(BaseParens baseParens) {
+		baseParens.struct=baseParens.getExprWrapper().struct;
 	}
 	
+	@Override
+	public void visit(BaseNew baseNew) {
+		if(baseNew.getArrayOptional() instanceof NoArrayOpt) {
+			report_error("Klase nisu podrzane",baseNew);
+			baseNew.struct=Tab.noType;
+		} else {
+			baseNew.struct=new Struct(Struct.Array,baseNew.getStandardType().struct);
+		}
+	}
+	
+	@Override
+	public void visit(ArrayOpt arrayOpt) {
+		if(arrayOpt.getExprWrapper().struct!=Tab.intType) {
+			report_error("Niz moze da se indeksira samo integerima",arrayOpt);
+		}
+	}
+	
+	@Override
+	public void visit(Factor factor) {
+		if (factor.getMinusOptional() instanceof MinusOpt) {
+			//System.out.println(factor.getBaseFactor().toString());
+			if (factor.getBaseFactor().struct.equals(Tab.intType)) {
+				factor.struct=Tab.intType;
+			} else {
+				report_error("Negacija vrednosti koja nije integer",factor);
+				factor.struct=Tab.noType;
+			}
+		} else {
+			factor.struct=factor.getBaseFactor().struct;
+		}
+	}
+	
+	@Override
+	public void visit(SingleFactor singleFactor) {
+		singleFactor.struct=singleFactor.getFactor().struct;
+	}
+	
+	@Override
+	public void visit(MultipleFactors multipleFactors) {
+		if (multipleFactors.getTerm().struct!=Tab.intType || multipleFactors.getFactor().struct!=Tab.intType) {
+			report_error("Racunske operacije mogu da se vrse samo nad integerima",multipleFactors);
+			multipleFactors.struct=Tab.noType;
+		} else {
+			multipleFactors.struct=Tab.intType;
+		}
+	}
+	
+	@Override
+	public void visit(SingleTerm singleTerm) {
+		singleTerm.struct=singleTerm.getTerm().struct;
+	}
+	
+	@Override
+	public void visit(MultipleTerms multipleTerms) {
+		if (multipleTerms.getTerm().struct!=Tab.intType || multipleTerms.getExpr().struct!=Tab.intType) {
+			report_error("Racunske operacije mogu da se vrse samo nad integerima",multipleTerms);
+			multipleTerms.struct=Tab.noType;
+		} else {
+			multipleTerms.struct=Tab.intType;
+		}
+	}
+	
+	@Override
+	public void visit(NormalExpr normalExpr) {
+		normalExpr.struct=normalExpr.getExpr().struct;
+	}
+	
+	@Override
+	public void visit(NotZeroExpr notZeroExpr) {
+		if(notZeroExpr.getExpr().struct!=Tab.intType || notZeroExpr.getExpr1().struct!=Tab.intType){
+			report_error("Oba operanda moraju da budu integeri za ?? operator",notZeroExpr);
+			notZeroExpr.struct=Tab.noType;
+		} else {
+			notZeroExpr.struct=Tab.intType;
+		}
+	}
+	
+	@Override
+	public void visit(Designator designator) {
+		designator.obj=Tab.find(designator.getDesignatorName().getDesignatorName());
+		if (designator.obj.equals(Tab.noObj)) {
+			report_error("Simbol nije deklarisan",designator);
+		}
+		if (designator.getArrayOptional() instanceof ArrayOpt) {
+			if(designator.obj.getType().getKind()!=Struct.Array) {
+				report_error("Simbol nije niz, ne moze da se pristupa njegovim elementima",designator);
+			} else {
+				//designator.obj.getType()=
+			}
+		}
+	}
+	
+	@Override
+	public void visit(DesignatorStatementV designatorStatement) {
+		Struct designatorStruct;
+		if(designatorStatement.getDesignator().obj.getType().getKind()!=Struct.Array) {
+			designatorStruct=designatorStatement.getDesignator().obj.getType();
+		} else {
+			if(designatorStatement.getDesignator().getArrayOptional() instanceof ArrayOpt) {
+				designatorStruct=designatorStatement.getDesignator().obj.getType().getElemType();
+			} else {
+				designatorStruct=designatorStatement.getDesignator().obj.getType();
+			}
+		}
+		if (designatorStatement.getDesignator().obj.getKind()!=Obj.Var) {
+			report_error("Ne moze da se izvrsi dodela simbolu",designatorStatement);
+		}
+		if(designatorStatement.getRightSide() instanceof PlusPlus && designatorStruct !=Tab.intType) {
+			report_error("Operator ++ moze da se koristi samo za integere",designatorStatement);
+		}
+		if(designatorStatement.getRightSide() instanceof MinusMinus && designatorStruct!=Tab.intType) {
+			report_error("Operator -- moze da se koristi samo za integere",designatorStatement);
+		}	
+		if(designatorStatement.getRightSide() instanceof EqualAssign && 
+		   !((EqualAssign)designatorStatement.getRightSide()).getExprWrapper().struct.assignableTo(designatorStruct) ) {
+			report_error("Dodela nije moguca, tipovi nisu kompatibilni",designatorStatement);
+		}
+	}
+	
+	public void visit(ReadSt readSt) {
+		Struct designatorStruct;
+		if(readSt.getDesignator().obj.getType().getKind()!=Struct.Array) {
+			designatorStruct=readSt.getDesignator().obj.getType();
+		} else {
+			if(readSt.getDesignator().getArrayOptional() instanceof ArrayOpt) {
+				designatorStruct=readSt.getDesignator().obj.getType().getElemType();
+			} else {
+				designatorStruct=readSt.getDesignator().obj.getType();
+			}
+		}
+		if (readSt.getDesignator().obj.getKind()!=Obj.Var) {
+			report_error("Ne moze da se cita simbol koji nije promenjiva",readSt);
+		}
+		if (designatorStruct!=Tab.intType && designatorStruct!=boolType && designatorStruct!=Tab.charType) {
+			report_error("Nije moguce citati u promenjive koje nisu integer,char ili bool",readSt);
+		}
+	}
+	
+	public void visit(PrintSt printSt) {
+		if(printSt.getExprWrapper().struct!=Tab.intType && printSt.getExprWrapper().struct!=boolType && printSt.getExprWrapper().struct!=Tab.charType) {
+			report_error("Nije moguce stampati promenjive koje nisu tipa integer,char ili bool",printSt);
+		}
+	}
+	
+	public void visit(ReturnSt returnSt) {
+		if(returnSt.getReturnOptional() instanceof NoReturnOpt && retType!=Tab.noType) {
+			report_error("Return je prazan iako metodin povratni tip nije void",returnSt);
+		}
+		if(returnSt.getReturnOptional() instanceof ReturnOpt && retType!=((ReturnOpt)returnSt.getReturnOptional()).getExprWrapper().struct) {
+			report_error("Return vraca tip koji je razlicit ot metodinog povratnog tipa",returnSt);
+		}
+	}
+	
+	/*
 	@Override
 	public void visit(Constant constant) {
 		

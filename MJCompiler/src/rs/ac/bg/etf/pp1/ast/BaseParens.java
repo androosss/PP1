@@ -1,25 +1,25 @@
 // generated with ast extension for cup
 // version 0.8
-// 8/7/2022 18:40:30
+// 14/7/2022 22:17:41
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class BaseParens extends BaseFactor {
 
-    private Expr Expr;
+    private ExprWrapper ExprWrapper;
 
-    public BaseParens (Expr Expr) {
-        this.Expr=Expr;
-        if(Expr!=null) Expr.setParent(this);
+    public BaseParens (ExprWrapper ExprWrapper) {
+        this.ExprWrapper=ExprWrapper;
+        if(ExprWrapper!=null) ExprWrapper.setParent(this);
     }
 
-    public Expr getExpr() {
-        return Expr;
+    public ExprWrapper getExprWrapper() {
+        return ExprWrapper;
     }
 
-    public void setExpr(Expr Expr) {
-        this.Expr=Expr;
+    public void setExprWrapper(ExprWrapper ExprWrapper) {
+        this.ExprWrapper=ExprWrapper;
     }
 
     public void accept(Visitor visitor) {
@@ -27,16 +27,16 @@ public class BaseParens extends BaseFactor {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Expr!=null) Expr.accept(visitor);
+        if(ExprWrapper!=null) ExprWrapper.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Expr!=null) Expr.traverseTopDown(visitor);
+        if(ExprWrapper!=null) ExprWrapper.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Expr!=null) Expr.traverseBottomUp(visitor);
+        if(ExprWrapper!=null) ExprWrapper.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -45,8 +45,8 @@ public class BaseParens extends BaseFactor {
         buffer.append(tab);
         buffer.append("BaseParens(\n");
 
-        if(Expr!=null)
-            buffer.append(Expr.toString("  "+tab));
+        if(ExprWrapper!=null)
+            buffer.append(ExprWrapper.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

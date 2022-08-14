@@ -55,23 +55,33 @@ scan with {:
 
 terminal String IDENT;
 terminal Integer NUMBER;
-terminal Integer BOOL;
-terminal Character CHAR;
+terminal String BOOL;
+terminal String CHAR;
 
 terminal PROG, LBRACE, RBRACE, SEMI, EQUAL, PLUS, MINUS, MUL, DIV, MOD, NOTZERO, LPAREN, RPAREN, LANGLE, RANGLE;
 terminal PLUSPLUS, MINUSMINUS, COMMA, CONST, PRINT, READ, VOID, RETURN,NEW;
 
 nonterminal Program, ProgName, DeclList, MethodDeclList;
 nonterminal Declaration, VarDecl, ConstDecl;
-nonterminal Variables, Type, StandardType, Variable;
-nonterminal Constants, Constant, ConstantValues;
+nonterminal Variables, Type, Variable;
+nonterminal Constants, Constant;
 nonterminal MethodDecl, MethodName, FormParams, StatementList;
 nonterminal FormParamList, FormParam;
-nonterminal Statement, Designator, DesignatorStatement, PrintOptional, ReturnOptional;
+nonterminal Statement, DesignatorStatement, PrintOptional, ReturnOptional;
 nonterminal RightSide, DesignatorName, ArrayOptional;
-nonterminal Expr, Term, Factor, MinusOptional, BaseFactor;
+nonterminal MinusOptional;
 nonterminal CallOptional, ActParams;
 nonterminal Addop, Mulop;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+
+nonterminal rs.etf.pp1.symboltable.concepts.Struct ExprWrapper;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Term;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Factor;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct BaseFactor;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct ConstantValues;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct StandardType;
 
 
 Program ::= (Program) PROG ProgName DeclList LBRACE MethodDeclList RBRACE;
@@ -158,7 +168,7 @@ Statement ::= (DesignatorSt) DesignatorStatement SEMI
 			  |
 			  (ReadSt) READ LPAREN Designator RPAREN SEMI
 			  |
-			  (PrintSt) PRINT LPAREN Expr PrintOptional RPAREN SEMI
+			  (PrintSt) PRINT LPAREN ExprWrapper PrintOptional RPAREN SEMI
 			  |
 			  (ReturnSt) RETURN ReturnOptional SEMI
 			  |
@@ -170,7 +180,7 @@ PrintOptional ::= (PrintOpt) SEMI NUMBER
 				  (NoPrintOpt) /* epsilon */
 				  ;
 				  
-ReturnOptional ::= (ReturnOpt) Expr
+ReturnOptional ::= (ReturnOpt) ExprWrapper
 				   |
 				   (NoReturnOpt) /* epsilon */
 				   ;
@@ -184,17 +194,22 @@ Designator ::= (Designator) DesignatorName ArrayOptional;
 
 DesignatorName ::= (DesignatorName) IDENT:designatorName;
 			  
-ArrayOptional ::= (ArrayOpt) LANGLE Expr RANGLE
+ArrayOptional ::= (ArrayOpt) LANGLE ExprWrapper RANGLE
 				  |
 				  (NoArrayOpt) /* epsilon */
 				  ;
 			
-RightSide ::= (EqualAssign) EQUAL Expr
+RightSide ::= (EqualAssign) EQUAL ExprWrapper
 			  |
 			  (PlusPlus) PLUSPLUS
 			  |
 			  (MinusMinus) MINUSMINUS
 			  ;
+			  
+ExprWrapper ::= (NormalExpr) Expr
+				|
+				(NotZeroExpr) Expr NOTZERO Expr
+				;
 			 
 Expr ::= (MultipleTerms) Expr Addop Term
 		 |
@@ -219,7 +234,7 @@ BaseFactor ::= (BaseCall) Designator CallOptional
 			   |
 			   (BaseNew) NEW StandardType ArrayOptional
 			   |
-			   (BaseParens) LPAREN Expr RPAREN
+			   (BaseParens) LPAREN ExprWrapper RPAREN
 			   ;
 			 
 CallOptional ::= (CallOpt) LPAREN ActParams RPAREN
@@ -227,7 +242,7 @@ CallOptional ::= (CallOpt) LPAREN ActParams RPAREN
 				 (NoCallOpt) /* epsilon */
 				 ;
 				 
-ActParams ::= (HaveActParams) ActParams COMMA Expr
+ActParams ::= (HaveActParams) ActParams COMMA ExprWrapper
 			  |
 			  (NoActParam) /* epsilon */
 			  ;
