@@ -97,6 +97,8 @@ public class SemanticPass extends VisitorAdaptor {
 	
 	@Override
 	public void visit(Program program) {
+		nVars = Tab.currentScope.getnVars();
+		
 		if(!mainExists) {
 			report_error("Main funkcija ne postoji!",program);
 		}
@@ -254,15 +256,11 @@ public class SemanticPass extends VisitorAdaptor {
 			report_error("Pozivi metoda nisi podrzani",baseCall);
 			baseCall.struct=Tab.noType;
 		} else {
-			if(baseCall.getDesignator().obj.getType().getKind()!=Struct.Array) {
-				baseCall.struct=baseCall.getDesignator().obj.getType();
-			} else {
-				if(baseCall.getDesignator().getArrayOptional() instanceof ArrayOpt)
-					baseCall.struct=baseCall.getDesignator().obj.getType().getElemType();
-				else {
-					baseCall.struct=baseCall.getDesignator().obj.getType();
-				}
+			if(baseCall.getDesignator().obj.getKind()!=Obj.Var && baseCall.getDesignator().obj.getKind()!=Obj.Con
+			   && baseCall.getDesignator().obj.getKind()!=Obj.Elem) {
+				report_error("Samo promenjive, konstante i elementi niza mogu da se koriste u izrazima",baseCall);
 			}
+			baseCall.struct=baseCall.getDesignator().obj.getType();
 		}
 	}
 	
@@ -355,27 +353,25 @@ public class SemanticPass extends VisitorAdaptor {
 			report_error("Simbol nije deklarisan",designator);
 		}
 		if (designator.getArrayOptional() instanceof ArrayOpt) {
-			if(designator.obj.getType().getKind()!=Struct.Array) {
+			if(designator.obj.getType().getKind()!=Struct.Array || designator.obj.getKind()!=Obj.Var) {
 				report_error("Simbol nije niz, ne moze da se pristupa njegovim elementima",designator);
 			} else {
-				//designator.obj.getType()=
+				report_info("Pristup elementu niza: "+designator.obj.getName()+" tip: "+toString(designator.obj.getType()),designator);
+				designator.obj= new Obj(Obj.Elem, designator.getDesignatorName()+"[i]",designator.obj.getType().getElemType());
+			}
+		} else {
+			if(designator.obj.getLevel()>0) {
+				report_info("Pristup lokalnoj promenjivoj: "+designator.obj.getName()+" ,tip: "+toString(designator.obj.getType()),designator);
+			} else {
+				report_info("Pristup globalnoj promenjivoj: "+designator.obj.getName()+" ,tip: "+toString(designator.obj.getType()),designator);
 			}
 		}
 	}
 	
 	@Override
 	public void visit(DesignatorStatementV designatorStatement) {
-		Struct designatorStruct;
-		if(designatorStatement.getDesignator().obj.getType().getKind()!=Struct.Array) {
-			designatorStruct=designatorStatement.getDesignator().obj.getType();
-		} else {
-			if(designatorStatement.getDesignator().getArrayOptional() instanceof ArrayOpt) {
-				designatorStruct=designatorStatement.getDesignator().obj.getType().getElemType();
-			} else {
-				designatorStruct=designatorStatement.getDesignator().obj.getType();
-			}
-		}
-		if (designatorStatement.getDesignator().obj.getKind()!=Obj.Var) {
+		Struct designatorStruct=designatorStatement.getDesignator().obj.getType();
+		if (designatorStatement.getDesignator().obj.getKind()!=Obj.Var && designatorStatement.getDesignator().obj.getKind()!=Obj.Elem) {
 			report_error("Ne moze da se izvrsi dodela simbolu",designatorStatement);
 		}
 		if(designatorStatement.getRightSide() instanceof PlusPlus && designatorStruct !=Tab.intType) {
@@ -391,18 +387,9 @@ public class SemanticPass extends VisitorAdaptor {
 	}
 	
 	public void visit(ReadSt readSt) {
-		Struct designatorStruct;
-		if(readSt.getDesignator().obj.getType().getKind()!=Struct.Array) {
-			designatorStruct=readSt.getDesignator().obj.getType();
-		} else {
-			if(readSt.getDesignator().getArrayOptional() instanceof ArrayOpt) {
-				designatorStruct=readSt.getDesignator().obj.getType().getElemType();
-			} else {
-				designatorStruct=readSt.getDesignator().obj.getType();
-			}
-		}
-		if (readSt.getDesignator().obj.getKind()!=Obj.Var) {
-			report_error("Ne moze da se cita simbol koji nije promenjiva",readSt);
+		Struct designatorStruct=readSt.getDesignator().obj.getType();
+		if (readSt.getDesignator().obj.getKind()!=Obj.Var && readSt.getDesignator().obj.getKind()!=Obj.Elem) {
+			report_error("Ne moze da se cita simbol koji nije promenjiva ili element niza",readSt);
 		}
 		if (designatorStruct!=Tab.intType && designatorStruct!=boolType && designatorStruct!=Tab.charType) {
 			report_error("Nije moguce citati u promenjive koje nisu integer,char ili bool",readSt);
@@ -422,21 +409,7 @@ public class SemanticPass extends VisitorAdaptor {
 		if(returnSt.getReturnOptional() instanceof ReturnOpt && retType!=((ReturnOpt)returnSt.getReturnOptional()).getExprWrapper().struct) {
 			report_error("Return vraca tip koji je razlicit ot metodinog povratnog tipa",returnSt);
 		}
-	}
-	
-	/*
-	@Override
-	public void visit(Constant constant) {
-		
-	}
-	
-	@Override
-	public void visit(Constant constant) {
-		
-	}*/
-	
-	
-	
+	}	
 	
 }
 

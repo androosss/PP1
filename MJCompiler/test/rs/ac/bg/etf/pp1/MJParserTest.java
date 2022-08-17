@@ -52,20 +52,22 @@ public class MJParserTest {
 			
 	        log.info("Print calls = " + semanticCheck.printCallCount);
 	        Tab.dump();
-	        
+	      	        
 	        if (!p.errorDetected && semanticCheck.passed()) {
+	        	log.info("Parsiranje uspesno zavrseno!");
+	        	
 	        	File objFile = new File(args[1]);
 	        	log.info("Generating bytecode file: " + objFile.getAbsolutePath());
 	        	if (objFile.exists())
 	        		objFile.delete();
 	        	
-	        	log.info("Parsiranje uspesno zavrseno!");
-	        	/*// Code generation...
+	        	// Code generation...
 	        	CodeGenerator codeGenerator = new CodeGenerator();
 	        	prog.traverseBottomUp(codeGenerator);
 	        	Code.dataSize = semanticCheck.nVars;
 	        	Code.mainPc = codeGenerator.getMainPc();
-	        	Code.write(new FileOutputStream(objFile));*/
+	        	Code.write(new FileOutputStream(objFile));
+	        	log.info("Generisanje uspesno zavrseno!");
 	        }
 	        else {
 	        	log.error("Parsiranje NIJE uspesno zavrseno!");
