@@ -1,0 +1,257 @@
+INFO  21:54:30,324 - Compiling source file: C:\Users\mm170466d\Desktop\PP1\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  21:54:30,356 - #6 program
+INFO  21:54:30,356 - #2 test301
+INFO  21:54:30,356 - #24 const
+INFO  21:54:30,357 - #2 int
+INFO  21:54:30,357 - #2 nula
+INFO  21:54:30,358 - #10 =
+INFO  21:54:30,358 - #3 0
+INFO  21:54:30,358 - #9 ;
+INFO  21:54:30,359 - #24 const
+INFO  21:54:30,360 - #2 int
+INFO  21:54:30,360 - #2 jedan
+INFO  21:54:30,360 - #10 =
+INFO  21:54:30,360 - #3 1
+INFO  21:54:30,360 - #9 ;
+INFO  21:54:30,360 - #24 const
+INFO  21:54:30,360 - #2 int
+INFO  21:54:30,360 - #2 tri
+INFO  21:54:30,360 - #10 =
+INFO  21:54:30,361 - #3 3
+INFO  21:54:30,361 - #9 ;
+INFO  21:54:30,361 - #24 const
+INFO  21:54:30,364 - #2 int
+INFO  21:54:30,364 - #2 pet
+INFO  21:54:30,364 - #10 =
+INFO  21:54:30,364 - #3 5
+INFO  21:54:30,364 - #9 ;
+INFO  21:54:30,364 - #2 int
+INFO  21:54:30,364 - #2 niz
+INFO  21:54:30,364 - #19 [
+INFO  21:54:30,364 - #20 ]
+INFO  21:54:30,365 - #9 ;
+INFO  21:54:30,365 - #2 char
+INFO  21:54:30,365 - #2 nizch
+INFO  21:54:30,365 - #19 [
+INFO  21:54:30,365 - #20 ]
+INFO  21:54:30,366 - #9 ;
+INFO  21:54:30,366 - #7 {
+INFO  21:54:30,366 - #27 void
+INFO  21:54:30,367 - #2 main
+INFO  21:54:30,368 - #17 (
+INFO  21:54:30,368 - #18 )
+INFO  21:54:30,369 - #2 int
+INFO  21:54:30,369 - #2 bodovi
+INFO  21:54:30,370 - #9 ;
+INFO  21:54:30,370 - #2 bool
+INFO  21:54:30,370 - #2 bt
+INFO  21:54:30,370 - #10 =
+ERROR 21:54:30,370 - 
+Sintaksna greska na liniji 14
+INFO  21:54:30,370 - #4 true
+INFO  21:54:30,371 - #9 ;
+INFO  21:54:30,371 - #24 const
+INFO  21:54:30,372 - #2 int
+INFO  21:54:30,372 - #2 a
+ERROR 21:54:30,372 - Sintaksa greska deklaracije promenljive na liniji 14
+INFO  21:54:30,373 - #10 =
+INFO  21:54:30,373 - #3 5
+INFO  21:54:30,373 - #9 ;
+INFO  21:54:30,374 - #7 {
+INFO  21:54:30,374 - #25 print
+INFO  21:54:30,375 - #17 (
+INFO  21:54:30,375 - #2 bt
+INFO  21:54:30,376 - #23 ,
+INFO  21:54:30,380 - #3 3
+INFO  21:54:30,380 - #18 )
+INFO  21:54:30,380 - #9 ;
+INFO  21:54:30,380 - #8 }
+INFO  21:54:30,380 - #8 }
+INFO  21:54:30,383 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  DeclsList(
+    DeclsList(
+      DeclsList(
+        DeclsList(
+          DeclsList(
+            DeclsList(
+              NoDeclList(
+              ) [NoDeclList]
+              DeclarationConst(
+                ConstDecl(
+                  StandardType(
+                   int
+                  ) [StandardType]
+                  SingleConstant(
+                    Constant(
+                     nula
+                      ConstInt(
+                       0
+                      ) [ConstInt]
+                    ) [Constant]
+                  ) [SingleConstant]
+                ) [ConstDecl]
+              ) [DeclarationConst]
+            ) [DeclsList]
+            DeclarationConst(
+              ConstDecl(
+                StandardType(
+                 int
+                ) [StandardType]
+                SingleConstant(
+                  Constant(
+                   jedan
+                    ConstInt(
+                     1
+                    ) [ConstInt]
+                  ) [Constant]
+                ) [SingleConstant]
+              ) [ConstDecl]
+            ) [DeclarationConst]
+          ) [DeclsList]
+          DeclarationConst(
+            ConstDecl(
+              StandardType(
+               int
+              ) [StandardType]
+              SingleConstant(
+                Constant(
+                 tri
+                  ConstInt(
+                   3
+                  ) [ConstInt]
+                ) [Constant]
+              ) [SingleConstant]
+            ) [ConstDecl]
+          ) [DeclarationConst]
+        ) [DeclsList]
+        DeclarationConst(
+          ConstDecl(
+            StandardType(
+             int
+            ) [StandardType]
+            SingleConstant(
+              Constant(
+               pet
+                ConstInt(
+                 5
+                ) [ConstInt]
+              ) [Constant]
+            ) [SingleConstant]
+          ) [ConstDecl]
+        ) [DeclarationConst]
+      ) [DeclsList]
+      DeclarationVar(
+        VarDeclV(
+          StandardType(
+           int
+          ) [StandardType]
+          SingleVariable(
+            VariableArray(
+             niz
+            ) [VariableArray]
+          ) [SingleVariable]
+        ) [VarDeclV]
+      ) [DeclarationVar]
+    ) [DeclsList]
+    DeclarationVar(
+      VarDeclV(
+        StandardType(
+         char
+        ) [StandardType]
+        SingleVariable(
+          VariableArray(
+           nizch
+          ) [VariableArray]
+        ) [SingleVariable]
+      ) [VarDeclV]
+    ) [DeclarationVar]
+  ) [DeclsList]
+  MethodDeclarations(
+    NoMetDecl(
+    ) [NoMetDecl]
+    MethodDecl(
+      VoidType(
+      ) [VoidType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoFormParams(
+      ) [NoFormParams]
+      DeclsList(
+        DeclsList(
+          DeclsList(
+            NoDeclList(
+            ) [NoDeclList]
+            DeclarationVar(
+              VarDeclV(
+                StandardType(
+                 int
+                ) [StandardType]
+                SingleVariable(
+                  VariableNormal(
+                   bodovi
+                  ) [VariableNormal]
+                ) [SingleVariable]
+              ) [VarDeclV]
+            ) [DeclarationVar]
+          ) [DeclsList]
+          DeclarationErr(
+          ) [DeclarationErr]
+        ) [DeclsList]
+        DeclarationConst(
+          ConstDecl(
+            StandardType(
+             int
+            ) [StandardType]
+            SingleConstant(
+              Constant(
+               a
+                ConstInt(
+                 5
+                ) [ConstInt]
+              ) [Constant]
+            ) [SingleConstant]
+          ) [ConstDecl]
+        ) [DeclarationConst]
+      ) [DeclsList]
+      HaveStatements(
+        NoStatements(
+        ) [NoStatements]
+        PrintSt(
+          NormalExpr(
+            SingleTerm(
+              SingleFactor(
+                Factor(
+                  NoMinusOpt(
+                  ) [NoMinusOpt]
+                  BaseCall(
+                    Designator(
+                      DesignatorName(
+                       bt
+                      ) [DesignatorName]
+                      NoArrayOpt(
+                      ) [NoArrayOpt]
+                    ) [Designator]
+                    NoCallOpt(
+                    ) [NoCallOpt]
+                  ) [BaseCall]
+                ) [Factor]
+              ) [SingleFactor]
+            ) [SingleTerm]
+          ) [NormalExpr]
+          PrintOpt(
+           3
+          ) [PrintOpt]
+        ) [PrintSt]
+      ) [HaveStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+ERROR 21:54:30,390 - Simbol nije deklarisan na liniji 17
+INFO  21:54:30,390 - Pristup globalnoj promenjivoj: noObj ,tip: void na liniji 17
+ERROR 21:54:30,391 - Nije moguce stampati promenjive koje nisu tipa integer,char ili bool na liniji 7
+INFO  21:54:30,391 - Print calls = 0
+ERROR 21:54:30,392 - Parsiranje NIJE uspesno zavrseno!

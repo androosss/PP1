@@ -1,0 +1,23 @@
+program test301
+
+	const int nula = 0;
+	const int jedan = 1;
+	const int tri = 3;
+        const int pet = 5;
+
+	int niz[];
+	char nizch[];
+	
+{
+	void main()	
+		int bodovi;
+		bool bt;
+		const int a=5;
+	{
+		bt=true;
+		bodovi=-5*6+30;
+		bodovi=bodovi??1;
+		print(bt,3);
+		print(bodovi);
+	}
+}

@@ -1,0 +1,240 @@
+INFO  21:37:47,903 - Compiling source file: C:\Users\mm170466d\Desktop\PP1\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  21:37:47,933 - #6 program
+INFO  21:37:47,933 - #2 test301
+INFO  21:37:47,933 - #24 const
+INFO  21:37:47,935 - #2 int
+INFO  21:37:47,935 - #2 nula
+INFO  21:37:47,936 - #10 =
+INFO  21:37:47,937 - #3 0
+INFO  21:37:47,937 - #9 ;
+INFO  21:37:47,938 - #24 const
+INFO  21:37:47,939 - #2 int
+INFO  21:37:47,939 - #2 jedan
+INFO  21:37:47,939 - #10 =
+INFO  21:37:47,939 - #3 1
+INFO  21:37:47,940 - #9 ;
+INFO  21:37:47,940 - #24 const
+INFO  21:37:47,940 - #2 int
+INFO  21:37:47,940 - #2 tri
+INFO  21:37:47,940 - #10 =
+INFO  21:37:47,941 - #3 3
+INFO  21:37:47,941 - #9 ;
+INFO  21:37:47,941 - #24 const
+INFO  21:37:47,946 - #2 int
+INFO  21:37:47,946 - #2 pet
+INFO  21:37:47,946 - #10 =
+INFO  21:37:47,946 - #3 5
+INFO  21:37:47,946 - #9 ;
+INFO  21:37:47,946 - #2 int
+INFO  21:37:47,946 - #2 niz
+INFO  21:37:47,947 - #19 [
+INFO  21:37:47,947 - #20 ]
+INFO  21:37:47,947 - #9 ;
+INFO  21:37:47,947 - #2 char
+INFO  21:37:47,948 - #2 nizch
+INFO  21:37:47,948 - #19 [
+INFO  21:37:47,948 - #20 ]
+INFO  21:37:47,948 - #9 ;
+INFO  21:37:47,948 - #7 {
+INFO  21:37:47,948 - #27 void
+INFO  21:37:47,949 - #2 main
+INFO  21:37:47,949 - #17 (
+INFO  21:37:47,951 - #18 )
+INFO  21:37:47,952 - #2 int
+INFO  21:37:47,952 - #2 bodovi
+INFO  21:37:47,952 - #9 ;
+INFO  21:37:47,952 - #2 bool
+INFO  21:37:47,953 - #2 bt
+INFO  21:37:47,953 - #9 ;
+INFO  21:37:47,953 - #24 const
+INFO  21:37:47,953 - #2 int
+INFO  21:37:47,953 - #2 a
+INFO  21:37:47,954 - #10 =
+INFO  21:37:47,954 - #3 5
+INFO  21:37:47,954 - #9 ;
+INFO  21:37:47,954 - #7 {
+INFO  21:37:47,954 - #25 print
+INFO  21:37:47,955 - #17 (
+INFO  21:37:47,955 - #5 'c'
+INFO  21:37:47,957 - #23 ,
+ERROR 21:37:47,958 - 
+Sintaksna greska na liniji 17
+INFO  21:37:47,959 - #3 3
+INFO  21:37:47,959 - #18 )
+INFO  21:37:47,959 - #9 ;
+INFO  21:37:47,960 - #8 }
+INFO  21:37:47,960 - #8 }
+ERROR 21:37:47,960 - Sintaksa greska dodele promenljivoj na liniji 1
+INFO  21:37:47,963 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  DeclsList(
+    DeclsList(
+      DeclsList(
+        DeclsList(
+          DeclsList(
+            DeclsList(
+              NoDeclList(
+              ) [NoDeclList]
+              DeclarationConst(
+                ConstDecl(
+                  StandardType(
+                   int
+                  ) [StandardType]
+                  SingleConstant(
+                    Constant(
+                     nula
+                      ConstInt(
+                       0
+                      ) [ConstInt]
+                    ) [Constant]
+                  ) [SingleConstant]
+                ) [ConstDecl]
+              ) [DeclarationConst]
+            ) [DeclsList]
+            DeclarationConst(
+              ConstDecl(
+                StandardType(
+                 int
+                ) [StandardType]
+                SingleConstant(
+                  Constant(
+                   jedan
+                    ConstInt(
+                     1
+                    ) [ConstInt]
+                  ) [Constant]
+                ) [SingleConstant]
+              ) [ConstDecl]
+            ) [DeclarationConst]
+          ) [DeclsList]
+          DeclarationConst(
+            ConstDecl(
+              StandardType(
+               int
+              ) [StandardType]
+              SingleConstant(
+                Constant(
+                 tri
+                  ConstInt(
+                   3
+                  ) [ConstInt]
+                ) [Constant]
+              ) [SingleConstant]
+            ) [ConstDecl]
+          ) [DeclarationConst]
+        ) [DeclsList]
+        DeclarationConst(
+          ConstDecl(
+            StandardType(
+             int
+            ) [StandardType]
+            SingleConstant(
+              Constant(
+               pet
+                ConstInt(
+                 5
+                ) [ConstInt]
+              ) [Constant]
+            ) [SingleConstant]
+          ) [ConstDecl]
+        ) [DeclarationConst]
+      ) [DeclsList]
+      DeclarationVar(
+        VarDeclV(
+          StandardType(
+           int
+          ) [StandardType]
+          SingleVariable(
+            VariableArray(
+             niz
+            ) [VariableArray]
+          ) [SingleVariable]
+        ) [VarDeclV]
+      ) [DeclarationVar]
+    ) [DeclsList]
+    DeclarationVar(
+      VarDeclV(
+        StandardType(
+         char
+        ) [StandardType]
+        SingleVariable(
+          VariableArray(
+           nizch
+          ) [VariableArray]
+        ) [SingleVariable]
+      ) [VarDeclV]
+    ) [DeclarationVar]
+  ) [DeclsList]
+  MethodDeclarations(
+    NoMetDecl(
+    ) [NoMetDecl]
+    MethodDecl(
+      VoidType(
+      ) [VoidType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoFormParams(
+      ) [NoFormParams]
+      DeclsList(
+        DeclsList(
+          DeclsList(
+            NoDeclList(
+            ) [NoDeclList]
+            DeclarationVar(
+              VarDeclV(
+                StandardType(
+                 int
+                ) [StandardType]
+                SingleVariable(
+                  VariableNormal(
+                   bodovi
+                  ) [VariableNormal]
+                ) [SingleVariable]
+              ) [VarDeclV]
+            ) [DeclarationVar]
+          ) [DeclsList]
+          DeclarationVar(
+            VarDeclV(
+              StandardType(
+               bool
+              ) [StandardType]
+              SingleVariable(
+                VariableNormal(
+                 bt
+                ) [VariableNormal]
+              ) [SingleVariable]
+            ) [VarDeclV]
+          ) [DeclarationVar]
+        ) [DeclsList]
+        DeclarationConst(
+          ConstDecl(
+            StandardType(
+             int
+            ) [StandardType]
+            SingleConstant(
+              Constant(
+               a
+                ConstInt(
+                 5
+                ) [ConstInt]
+              ) [Constant]
+            ) [SingleConstant]
+          ) [ConstDecl]
+        ) [DeclarationConst]
+      ) [DeclsList]
+      HaveStatements(
+        NoStatements(
+        ) [NoStatements]
+        DesignatorSt(
+          DesignatorError(
+          ) [DesignatorError]
+        ) [DesignatorSt]
+      ) [HaveStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  21:37:47,970 - Print calls = 0
+ERROR 21:37:47,970 - Parsiranje NIJE uspesno zavrseno!

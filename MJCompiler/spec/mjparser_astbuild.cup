@@ -74,7 +74,6 @@ nonterminal Variable Variable;
 nonterminal Constants Constants;
 nonterminal Constant Constant;
 nonterminal MethodDecl MethodDecl;
-nonterminal MethodName MethodName;
 nonterminal FormParams FormParams;
 nonterminal StatementList StatementList;
 nonterminal FormParamList FormParamList;
@@ -84,7 +83,6 @@ nonterminal DesignatorStatement DesignatorStatement;
 nonterminal PrintOptional PrintOptional;
 nonterminal ReturnOptional ReturnOptional;
 nonterminal RightSide RightSide;
-nonterminal DesignatorName DesignatorName;
 nonterminal ArrayOptional ArrayOptional;
 nonterminal MinusOptional MinusOptional;
 nonterminal CallOptional CallOptional;
@@ -92,7 +90,9 @@ nonterminal ActParams ActParams;
 nonterminal Addop Addop;
 nonterminal Mulop Mulop;
 
+nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorName;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodName;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct ExprWrapper;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
@@ -194,7 +194,7 @@ Statement ::= (DesignatorSt) DesignatorStatement:D1 SEMI {: RESULT=new Designato
 			  (StBlock) LBRACE StatementList:S1 RBRACE {: RESULT=new StBlock(S1); RESULT.setLine(S1left); :}
 			  ;
 			  
-PrintOptional ::= (PrintOpt) SEMI NUMBER:N1 {: RESULT=new PrintOpt(N1); RESULT.setLine(N1left); :}
+PrintOptional ::= (PrintOpt) COMMA NUMBER:N1 {: RESULT=new PrintOpt(N1); RESULT.setLine(N1left); :}
 				  |
 				  (NoPrintOpt) {: RESULT=new NoPrintOpt(); :} /* epsilon */
 				  ;

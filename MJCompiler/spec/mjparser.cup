@@ -65,15 +65,17 @@ nonterminal Program, ProgName, DeclList, MethodDeclList;
 nonterminal Declaration, VarDecl, ConstDecl;
 nonterminal Variables, Type, Variable;
 nonterminal Constants, Constant;
-nonterminal MethodDecl, MethodName, FormParams, StatementList;
+nonterminal MethodDecl, FormParams, StatementList;
 nonterminal FormParamList, FormParam;
 nonterminal Statement, DesignatorStatement, PrintOptional, ReturnOptional;
-nonterminal RightSide, DesignatorName, ArrayOptional;
+nonterminal RightSide, ArrayOptional;
 nonterminal MinusOptional;
 nonterminal CallOptional, ActParams;
 nonterminal Addop, Mulop;
 
+nonterminal rs.etf.pp1.symboltable.concepts.Obj DesignatorName;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj MethodName;
 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct ExprWrapper;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Expr;
@@ -175,7 +177,7 @@ Statement ::= (DesignatorSt) DesignatorStatement SEMI
 			  (StBlock) LBRACE StatementList RBRACE
 			  ;
 			  
-PrintOptional ::= (PrintOpt) SEMI NUMBER
+PrintOptional ::= (PrintOpt) COMMA NUMBER
 				  |
 				  (NoPrintOpt) /* epsilon */
 				  ;

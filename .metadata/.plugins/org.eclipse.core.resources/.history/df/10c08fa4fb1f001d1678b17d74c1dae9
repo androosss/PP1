@@ -1,0 +1,119 @@
+package rs.ac.bg.etf.pp1;
+
+import org.apache.log4j.Logger;
+
+import rs.ac.bg.etf.pp1.ast.*;
+import rs.etf.pp1.mj.runtime.*;
+import rs.etf.pp1.symboltable.*;
+import rs.etf.pp1.symboltable.concepts.*;
+
+public class CodeGenerator extends VisitorAdaptor {
+	Logger log = Logger.getLogger(getClass());
+	
+	private int varCount;
+	private int paramCnt;
+	
+	private int mainPc=0;
+	
+	public int getMainPc() {
+		return mainPc;
+	}
+	
+	public void report_fatal(String message, SyntaxNode info) {
+		StringBuilder msg = new StringBuilder(message);
+		int line = (info == null) ? 0: info.getLine();
+		if (line != 0)
+			msg.append (" na liniji ").append(line);
+		log.fatal(msg.toString());
+		System.exit(1);
+	}
+	
+	public void visit(MethodName methodName) {
+		Code.put(Code.enter);
+		Code.put(methodName.obj.getLevel());
+		Code.put(methodName.obj.getLocalSymbols().size());
+	}
+	
+	public void visit(MethodDecl methodDecl) {
+		Code.put(Code.exit);
+		Code.put(Code.return_);		
+	}
+	
+	public void visit(PrintOpt printOpt) {
+		Code.loadConst(printOpt.getN1());
+	}
+	
+	public void visit(NoPrintOpt noPrintOpt) {
+		Code.loadConst(0);
+	}
+	
+	public void visit(Designator designator) {
+		if(designator.getDesignatorName().obj.getType().getKind()==Struct.Array) {
+			Code.load(designator.getDesignatorName().obj)
+		}
+	}
+	
+	public void visit(BaseConst baseConst) {
+		if (baseConst.getConstantValues() instanceof ConstBool) {
+			Code.loadConst(((ConstBool)baseConst.getConstantValues()).getB1().equals("true")?1:0);
+		}
+		if (baseConst.getConstantValues() instanceof ConstInt) {
+			Code.loadConst(((ConstInt)baseConst.getConstantValues()).getN1());
+		}
+		if (baseConst.getConstantValues() instanceof ConstChar) {
+			Code.loadConst(((ConstChar)baseConst.getConstantValues()).getC1().charAt(1));
+		}
+	}
+	
+	public void visit(BaseCall baseCall) {
+		Code.load(baseCall.getDesignator().obj);
+	}
+	
+	public void visit(Factor factor) {
+		if (factor.getMinusOptional() instanceof MinusOpt) {
+			Code.put(Code.neg);
+		}
+	}
+	
+	public void visit(BaseParens baseParens) {
+		//Expr je vec na stacku
+	}
+	
+	public void visit(MultipleFactors multipleFactors) {
+		if (multipleFactors.getMulop() instanceof MultOp) {
+			Code.put(Code.mul);
+		}
+		if (multipleFactors.getMulop() instanceof DivOp) {
+			Code.put(Code.div);
+		}
+		if (multipleFactors.getMulop() instanceof ModOp) {
+			Code.put(Code.rem);
+		}
+	}
+	
+	public void visit(MultipleTerms multipleTerms) {
+		if (multipleTerms.getAddop() instanceof PlusOp) {
+			Code.put(Code.add);
+		}
+		if (multipleTerms.getAddop() instanceof MinusOp) {
+			Code.put(Code.sub);
+		}
+	}
+	
+	public void visit(PrintSt printSt) {
+		if (printSt.getExprWrapper().struct==Tab.charType) {
+			Code.put(Code.bprint);
+		} else {
+			Code.put(Code.print);
+		}
+	}
+	
+	public void visit(ReadSt readSt) {
+		
+	}
+	
+	public void visit(DesignatorStatementV designatorStatement) {
+		Code.store(designatorStatement.getDesignator().obj);
+	}
+	
+}

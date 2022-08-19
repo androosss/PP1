@@ -1,0 +1,297 @@
+INFO  22:02:53,036 - Compiling source file: C:\Users\mm170466d\Desktop\PP1\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  22:02:53,066 - #6 program
+INFO  22:02:53,066 - #2 test301
+INFO  22:02:53,066 - #24 const
+INFO  22:02:53,068 - #2 int
+INFO  22:02:53,068 - #2 nula
+INFO  22:02:53,069 - #10 =
+INFO  22:02:53,069 - #3 0
+INFO  22:02:53,069 - #9 ;
+INFO  22:02:53,070 - #24 const
+INFO  22:02:53,070 - #2 int
+INFO  22:02:53,071 - #2 jedan
+INFO  22:02:53,071 - #10 =
+INFO  22:02:53,071 - #3 1
+INFO  22:02:53,071 - #9 ;
+INFO  22:02:53,071 - #24 const
+INFO  22:02:53,071 - #2 int
+INFO  22:02:53,071 - #2 tri
+INFO  22:02:53,071 - #10 =
+INFO  22:02:53,071 - #3 3
+INFO  22:02:53,071 - #9 ;
+INFO  22:02:53,072 - #24 const
+INFO  22:02:53,074 - #2 int
+INFO  22:02:53,074 - #2 pet
+INFO  22:02:53,074 - #10 =
+INFO  22:02:53,074 - #3 5
+INFO  22:02:53,074 - #9 ;
+INFO  22:02:53,074 - #2 int
+INFO  22:02:53,074 - #2 niz
+INFO  22:02:53,074 - #19 [
+INFO  22:02:53,074 - #20 ]
+INFO  22:02:53,074 - #9 ;
+INFO  22:02:53,075 - #2 char
+INFO  22:02:53,075 - #2 nizch
+INFO  22:02:53,075 - #19 [
+INFO  22:02:53,075 - #20 ]
+INFO  22:02:53,075 - #9 ;
+INFO  22:02:53,075 - #7 {
+INFO  22:02:53,076 - #27 void
+INFO  22:02:53,076 - #2 main
+INFO  22:02:53,077 - #17 (
+INFO  22:02:53,078 - #18 )
+INFO  22:02:53,079 - #2 int
+INFO  22:02:53,079 - #2 bodovi
+INFO  22:02:53,080 - #9 ;
+INFO  22:02:53,080 - #2 bool
+INFO  22:02:53,080 - #2 bt
+INFO  22:02:53,080 - #9 ;
+INFO  22:02:53,081 - #24 const
+INFO  22:02:53,081 - #2 int
+INFO  22:02:53,081 - #2 a
+INFO  22:02:53,081 - #10 =
+INFO  22:02:53,081 - #3 5
+INFO  22:02:53,081 - #9 ;
+INFO  22:02:53,081 - #7 {
+INFO  22:02:53,082 - #2 bt
+INFO  22:02:53,082 - #10 =
+INFO  22:02:53,084 - #4 true
+INFO  22:02:53,085 - #9 ;
+INFO  22:02:53,086 - #25 print
+INFO  22:02:53,086 - #17 (
+INFO  22:02:53,087 - #2 bt
+INFO  22:02:53,087 - #23 ,
+INFO  22:02:53,088 - #3 3
+INFO  22:02:53,088 - #18 )
+INFO  22:02:53,088 - #9 ;
+INFO  22:02:53,088 - #8 }
+INFO  22:02:53,089 - #8 }
+INFO  22:02:53,091 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  DeclsList(
+    DeclsList(
+      DeclsList(
+        DeclsList(
+          DeclsList(
+            DeclsList(
+              NoDeclList(
+              ) [NoDeclList]
+              DeclarationConst(
+                ConstDecl(
+                  StandardType(
+                   int
+                  ) [StandardType]
+                  SingleConstant(
+                    Constant(
+                     nula
+                      ConstInt(
+                       0
+                      ) [ConstInt]
+                    ) [Constant]
+                  ) [SingleConstant]
+                ) [ConstDecl]
+              ) [DeclarationConst]
+            ) [DeclsList]
+            DeclarationConst(
+              ConstDecl(
+                StandardType(
+                 int
+                ) [StandardType]
+                SingleConstant(
+                  Constant(
+                   jedan
+                    ConstInt(
+                     1
+                    ) [ConstInt]
+                  ) [Constant]
+                ) [SingleConstant]
+              ) [ConstDecl]
+            ) [DeclarationConst]
+          ) [DeclsList]
+          DeclarationConst(
+            ConstDecl(
+              StandardType(
+               int
+              ) [StandardType]
+              SingleConstant(
+                Constant(
+                 tri
+                  ConstInt(
+                   3
+                  ) [ConstInt]
+                ) [Constant]
+              ) [SingleConstant]
+            ) [ConstDecl]
+          ) [DeclarationConst]
+        ) [DeclsList]
+        DeclarationConst(
+          ConstDecl(
+            StandardType(
+             int
+            ) [StandardType]
+            SingleConstant(
+              Constant(
+               pet
+                ConstInt(
+                 5
+                ) [ConstInt]
+              ) [Constant]
+            ) [SingleConstant]
+          ) [ConstDecl]
+        ) [DeclarationConst]
+      ) [DeclsList]
+      DeclarationVar(
+        VarDeclV(
+          StandardType(
+           int
+          ) [StandardType]
+          SingleVariable(
+            VariableArray(
+             niz
+            ) [VariableArray]
+          ) [SingleVariable]
+        ) [VarDeclV]
+      ) [DeclarationVar]
+    ) [DeclsList]
+    DeclarationVar(
+      VarDeclV(
+        StandardType(
+         char
+        ) [StandardType]
+        SingleVariable(
+          VariableArray(
+           nizch
+          ) [VariableArray]
+        ) [SingleVariable]
+      ) [VarDeclV]
+    ) [DeclarationVar]
+  ) [DeclsList]
+  MethodDeclarations(
+    NoMetDecl(
+    ) [NoMetDecl]
+    MethodDecl(
+      VoidType(
+      ) [VoidType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoFormParams(
+      ) [NoFormParams]
+      DeclsList(
+        DeclsList(
+          DeclsList(
+            NoDeclList(
+            ) [NoDeclList]
+            DeclarationVar(
+              VarDeclV(
+                StandardType(
+                 int
+                ) [StandardType]
+                SingleVariable(
+                  VariableNormal(
+                   bodovi
+                  ) [VariableNormal]
+                ) [SingleVariable]
+              ) [VarDeclV]
+            ) [DeclarationVar]
+          ) [DeclsList]
+          DeclarationVar(
+            VarDeclV(
+              StandardType(
+               bool
+              ) [StandardType]
+              SingleVariable(
+                VariableNormal(
+                 bt
+                ) [VariableNormal]
+              ) [SingleVariable]
+            ) [VarDeclV]
+          ) [DeclarationVar]
+        ) [DeclsList]
+        DeclarationConst(
+          ConstDecl(
+            StandardType(
+             int
+            ) [StandardType]
+            SingleConstant(
+              Constant(
+               a
+                ConstInt(
+                 5
+                ) [ConstInt]
+              ) [Constant]
+            ) [SingleConstant]
+          ) [ConstDecl]
+        ) [DeclarationConst]
+      ) [DeclsList]
+      HaveStatements(
+        HaveStatements(
+          NoStatements(
+          ) [NoStatements]
+          DesignatorSt(
+            DesignatorStatementV(
+              Designator(
+                DesignatorName(
+                 bt
+                ) [DesignatorName]
+                NoArrayOpt(
+                ) [NoArrayOpt]
+              ) [Designator]
+              EqualAssign(
+                NormalExpr(
+                  SingleTerm(
+                    SingleFactor(
+                      Factor(
+                        NoMinusOpt(
+                        ) [NoMinusOpt]
+                        BaseConst(
+                          ConstBool(
+                           true
+                          ) [ConstBool]
+                        ) [BaseConst]
+                      ) [Factor]
+                    ) [SingleFactor]
+                  ) [SingleTerm]
+                ) [NormalExpr]
+              ) [EqualAssign]
+            ) [DesignatorStatementV]
+          ) [DesignatorSt]
+        ) [HaveStatements]
+        PrintSt(
+          NormalExpr(
+            SingleTerm(
+              SingleFactor(
+                Factor(
+                  NoMinusOpt(
+                  ) [NoMinusOpt]
+                  BaseCall(
+                    Designator(
+                      DesignatorName(
+                       bt
+                      ) [DesignatorName]
+                      NoArrayOpt(
+                      ) [NoArrayOpt]
+                    ) [Designator]
+                    NoCallOpt(
+                    ) [NoCallOpt]
+                  ) [BaseCall]
+                ) [Factor]
+              ) [SingleFactor]
+            ) [SingleTerm]
+          ) [NormalExpr]
+          PrintOpt(
+           3
+          ) [PrintOpt]
+        ) [PrintSt]
+      ) [HaveStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  22:02:53,099 - Pristup lokalnoj promenjivoj: bt ,tip: bool na liniji 17
+INFO  22:02:53,100 - Pristup lokalnoj promenjivoj: bt ,tip: bool na liniji 18
+INFO  22:02:53,100 - Print calls = 0
+INFO  22:02:53,100 - Parsiranje uspesno zavrseno!
+INFO  22:02:53,100 - Generating bytecode file: C:\Users\mm170466d\Desktop\PP1\pp1lab.templateAST\workspace\MJCompiler\test\program.obj
+INFO  22:02:53,103 - Generisanje uspesno zavrseno!

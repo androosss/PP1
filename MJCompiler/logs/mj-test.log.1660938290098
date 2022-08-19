@@ -1,0 +1,255 @@
+INFO  21:44:25,893 - Compiling source file: C:\Users\mm170466d\Desktop\PP1\pp1lab.templateAST\workspace\MJCompiler\test\program.mj
+INFO  21:44:25,921 - #6 program
+INFO  21:44:25,922 - #2 test301
+INFO  21:44:25,922 - #24 const
+INFO  21:44:25,923 - #2 int
+INFO  21:44:25,923 - #2 nula
+INFO  21:44:25,924 - #10 =
+INFO  21:44:25,924 - #3 0
+INFO  21:44:25,924 - #9 ;
+INFO  21:44:25,926 - #24 const
+INFO  21:44:25,927 - #2 int
+INFO  21:44:25,927 - #2 jedan
+INFO  21:44:25,927 - #10 =
+INFO  21:44:25,928 - #3 1
+INFO  21:44:25,928 - #9 ;
+INFO  21:44:25,928 - #24 const
+INFO  21:44:25,928 - #2 int
+INFO  21:44:25,928 - #2 tri
+INFO  21:44:25,928 - #10 =
+INFO  21:44:25,928 - #3 3
+INFO  21:44:25,928 - #9 ;
+INFO  21:44:25,929 - #24 const
+INFO  21:44:25,932 - #2 int
+INFO  21:44:25,932 - #2 pet
+INFO  21:44:25,932 - #10 =
+INFO  21:44:25,932 - #3 5
+INFO  21:44:25,932 - #9 ;
+INFO  21:44:25,932 - #2 int
+INFO  21:44:25,932 - #2 niz
+INFO  21:44:25,932 - #19 [
+INFO  21:44:25,932 - #20 ]
+INFO  21:44:25,932 - #9 ;
+INFO  21:44:25,933 - #2 char
+INFO  21:44:25,933 - #2 nizch
+INFO  21:44:25,933 - #19 [
+INFO  21:44:25,933 - #20 ]
+INFO  21:44:25,933 - #9 ;
+INFO  21:44:25,933 - #7 {
+INFO  21:44:25,933 - #27 void
+INFO  21:44:25,934 - #2 main
+INFO  21:44:25,935 - #17 (
+INFO  21:44:25,936 - #18 )
+INFO  21:44:25,936 - #2 int
+INFO  21:44:25,937 - #2 bodovi
+INFO  21:44:25,937 - #9 ;
+INFO  21:44:25,937 - #2 bool
+INFO  21:44:25,937 - #2 bt
+INFO  21:44:25,937 - #9 ;
+INFO  21:44:25,938 - #24 const
+INFO  21:44:25,938 - #2 int
+INFO  21:44:25,938 - #2 a
+INFO  21:44:25,938 - #10 =
+INFO  21:44:25,938 - #3 5
+INFO  21:44:25,938 - #9 ;
+INFO  21:44:25,939 - #7 {
+INFO  21:44:25,939 - #25 print
+INFO  21:44:25,940 - #17 (
+INFO  21:44:25,940 - #4 true
+INFO  21:44:25,941 - #23 ,
+INFO  21:44:25,942 - #3 3
+INFO  21:44:25,942 - #18 )
+INFO  21:44:25,942 - #9 ;
+INFO  21:44:25,942 - #8 }
+INFO  21:44:25,943 - #8 }
+INFO  21:44:25,946 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  DeclsList(
+    DeclsList(
+      DeclsList(
+        DeclsList(
+          DeclsList(
+            DeclsList(
+              NoDeclList(
+              ) [NoDeclList]
+              DeclarationConst(
+                ConstDecl(
+                  StandardType(
+                   int
+                  ) [StandardType]
+                  SingleConstant(
+                    Constant(
+                     nula
+                      ConstInt(
+                       0
+                      ) [ConstInt]
+                    ) [Constant]
+                  ) [SingleConstant]
+                ) [ConstDecl]
+              ) [DeclarationConst]
+            ) [DeclsList]
+            DeclarationConst(
+              ConstDecl(
+                StandardType(
+                 int
+                ) [StandardType]
+                SingleConstant(
+                  Constant(
+                   jedan
+                    ConstInt(
+                     1
+                    ) [ConstInt]
+                  ) [Constant]
+                ) [SingleConstant]
+              ) [ConstDecl]
+            ) [DeclarationConst]
+          ) [DeclsList]
+          DeclarationConst(
+            ConstDecl(
+              StandardType(
+               int
+              ) [StandardType]
+              SingleConstant(
+                Constant(
+                 tri
+                  ConstInt(
+                   3
+                  ) [ConstInt]
+                ) [Constant]
+              ) [SingleConstant]
+            ) [ConstDecl]
+          ) [DeclarationConst]
+        ) [DeclsList]
+        DeclarationConst(
+          ConstDecl(
+            StandardType(
+             int
+            ) [StandardType]
+            SingleConstant(
+              Constant(
+               pet
+                ConstInt(
+                 5
+                ) [ConstInt]
+              ) [Constant]
+            ) [SingleConstant]
+          ) [ConstDecl]
+        ) [DeclarationConst]
+      ) [DeclsList]
+      DeclarationVar(
+        VarDeclV(
+          StandardType(
+           int
+          ) [StandardType]
+          SingleVariable(
+            VariableArray(
+             niz
+            ) [VariableArray]
+          ) [SingleVariable]
+        ) [VarDeclV]
+      ) [DeclarationVar]
+    ) [DeclsList]
+    DeclarationVar(
+      VarDeclV(
+        StandardType(
+         char
+        ) [StandardType]
+        SingleVariable(
+          VariableArray(
+           nizch
+          ) [VariableArray]
+        ) [SingleVariable]
+      ) [VarDeclV]
+    ) [DeclarationVar]
+  ) [DeclsList]
+  MethodDeclarations(
+    NoMetDecl(
+    ) [NoMetDecl]
+    MethodDecl(
+      VoidType(
+      ) [VoidType]
+      MethodName(
+       main
+      ) [MethodName]
+      NoFormParams(
+      ) [NoFormParams]
+      DeclsList(
+        DeclsList(
+          DeclsList(
+            NoDeclList(
+            ) [NoDeclList]
+            DeclarationVar(
+              VarDeclV(
+                StandardType(
+                 int
+                ) [StandardType]
+                SingleVariable(
+                  VariableNormal(
+                   bodovi
+                  ) [VariableNormal]
+                ) [SingleVariable]
+              ) [VarDeclV]
+            ) [DeclarationVar]
+          ) [DeclsList]
+          DeclarationVar(
+            VarDeclV(
+              StandardType(
+               bool
+              ) [StandardType]
+              SingleVariable(
+                VariableNormal(
+                 bt
+                ) [VariableNormal]
+              ) [SingleVariable]
+            ) [VarDeclV]
+          ) [DeclarationVar]
+        ) [DeclsList]
+        DeclarationConst(
+          ConstDecl(
+            StandardType(
+             int
+            ) [StandardType]
+            SingleConstant(
+              Constant(
+               a
+                ConstInt(
+                 5
+                ) [ConstInt]
+              ) [Constant]
+            ) [SingleConstant]
+          ) [ConstDecl]
+        ) [DeclarationConst]
+      ) [DeclsList]
+      HaveStatements(
+        NoStatements(
+        ) [NoStatements]
+        PrintSt(
+          NormalExpr(
+            SingleTerm(
+              SingleFactor(
+                Factor(
+                  NoMinusOpt(
+                  ) [NoMinusOpt]
+                  BaseConst(
+                    ConstBool(
+                     true
+                    ) [ConstBool]
+                  ) [BaseConst]
+                ) [Factor]
+              ) [SingleFactor]
+            ) [SingleTerm]
+          ) [NormalExpr]
+          PrintOpt(
+           3
+          ) [PrintOpt]
+        ) [PrintSt]
+      ) [HaveStatements]
+    ) [MethodDecl]
+  ) [MethodDeclarations]
+) [Program]
+INFO  21:44:25,952 - Print calls = 0
+INFO  21:44:25,953 - Parsiranje uspesno zavrseno!
+INFO  21:44:25,953 - Generating bytecode file: C:\Users\mm170466d\Desktop\PP1\pp1lab.templateAST\workspace\MJCompiler\test\program.obj
+INFO  21:44:25,956 - Generisanje uspesno zavrseno!

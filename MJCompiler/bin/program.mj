@@ -14,6 +14,7 @@ program test301
 	void main()	
 		int bodovi;
 		bool bt;
+		const int a=5;
 	{
 		bodovi = 0;
 		bodovi++;
@@ -38,12 +39,10 @@ program test301
 		print(nizch[1]);
 		print(nizch[jedan * 2]);
 			
-		return  ;
-			
 		bodovi = bodovi + (pet * jedan - 1) * bodovi - (3 % 2 + 3 * 2 - 3); 
 		print(bodovi);
 		
-		read(bodovi);
+		//read(bodovi);
 		print(bodovi);		
 	}
 }
