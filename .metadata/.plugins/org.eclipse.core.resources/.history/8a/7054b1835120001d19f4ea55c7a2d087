@@ -7,7 +7,6 @@ import rs.etf.pp1.mj.runtime.*;
 import rs.etf.pp1.symboltable.*;
 import rs.etf.pp1.symboltable.concepts.*;
 
-
 /* 
 Za b koristi Code.put(0) 
 Za s koristi Code.put2(0)
@@ -158,12 +157,7 @@ public class CodeGenerator extends VisitorAdaptor {
 			mainPc=Code.pc;
 		Code.put(Code.enter);
 		Code.put(methodName.obj.getLevel());
-		// bag, getLocalSymbols vraca i konstante i varijable iako, u deklaraciji kaze
-		// Meth: kolekcija lokalnih promenljivih
-		// private SymbolDataStructure locals;
-		// tako da je drugi parametar za enter veci nego sto mora da bude,
-		// ali nije previse bitno jer je bitno samo da se alocira dovoljno prostora,
-		// a alocira se vise nego dovoljno
+		System.out.println(methodName.obj.getLocalSymbols());
 		Code.put(methodName.obj.getLocalSymbols().size());
 	}
 	

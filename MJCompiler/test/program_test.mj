@@ -22,7 +22,7 @@ program test301
 		bodovi = bodovi * pet;
 		bodovi--;
 		print(bodovi); 
-			
+		print(a);
 		
 		niz = new int[3];
 		niz[nula] = jedan;
@@ -31,6 +31,7 @@ program test301
 		bodovi = niz[2] / niz[0];
 		print(bodovi); 
 		print(niz[2]);
+		
 		
 		nizch = new char[3];
 		nizch[0] = 'a';

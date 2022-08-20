@@ -15,6 +15,7 @@ program test301
 		int bodovi;
 		bool bt;
 		const int a=5;
+		int b;
 	{
 		bodovi = 0;
 		bodovi++;
@@ -31,6 +32,8 @@ program test301
 		bodovi = niz[2] / niz[0];
 		print(bodovi); 
 		print(niz[2]);
+		print(a);
+		b=69;
 		
 		nizch = new char[3];
 		nizch[0] = 'a';

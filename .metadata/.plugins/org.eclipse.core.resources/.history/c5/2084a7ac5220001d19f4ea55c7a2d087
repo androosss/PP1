@@ -1,12 +1,14 @@
 package rs.ac.bg.etf.pp1;
 
+import java.util.Iterator;
+
 import org.apache.log4j.Logger;
 
 import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.mj.runtime.*;
 import rs.etf.pp1.symboltable.*;
 import rs.etf.pp1.symboltable.concepts.*;
-
+import rs.etf.pp1.symboltable.structure.SymbolDataStructure;
 
 /* 
 Za b koristi Code.put(0) 
