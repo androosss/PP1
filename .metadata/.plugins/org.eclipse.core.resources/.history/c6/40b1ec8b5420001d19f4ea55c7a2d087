@@ -268,7 +268,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		} else {
 			Code.put(Code.read);
 		}
-		Code.store(readSt.getDesignator().obj);
+		Code.load(readSt.getDesignator().obj);
 	}
 	
 	public void visit(ReturnSt returnSt) {
