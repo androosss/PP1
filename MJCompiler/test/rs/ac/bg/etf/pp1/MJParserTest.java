@@ -51,7 +51,7 @@ public class MJParserTest {
 			prog.traverseBottomUp(semanticCheck);
 			
 	        log.info("Print calls = " + semanticCheck.printCallCount);
-	        Tab.dump();
+	        Tab.dump(new DumpSymbolTableVisitorWithBool());
 	      	        
 	        if (!p.errorDetected && semanticCheck.passed()) {
 	        	log.info("Parsiranje uspesno zavrseno!");
